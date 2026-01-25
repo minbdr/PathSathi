@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class 8 Computer Science - Computer Science Learning Hub</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .class-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 6rem 0 3rem;
+            margin-top: 70px;
+        }
+        
+        .hero-title {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .hero-subtitle {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+            line-height: 1.6;
+        }
+        
+        .chapters-section {
+            padding: 4rem 0;
+            background: #f8fafc;
+        }
+        
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 1rem;
+            color: #1e293b;
+        }
+        
+        .section-subtitle {
+            text-align: center;
+            color: #64748b;
+            font-size: 1.125rem;
+            margin-bottom: 3rem;
+        }
+        
+        .chapters-grid {
+            display: grid;
+            gap: 1.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .chapter-card {
+            background: white;
+            border-radius: 1rem;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+            border: 1px solid #e2e8f0;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        .chapter-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1);
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        .chapter-number {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: white;
+        }
+        
+        .foundation .chapter-number {
+            background: linear-gradient(135deg, #74b9ff, #0984e3);
+        }
+        
+        .application .chapter-number {
+            background: linear-gradient(135deg, #fd79a8, #e84393);
+        }
+        
+        .advanced .chapter-number {
+            background: linear-gradient(135deg, #00b894, #00a085);
+        }
+        
+        .chapter-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #1e293b;
+        }
+        
+        .chapter-description {
+            color: #64748b;
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+        
+        .chapter-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        
+        .chapter-tags {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+        
+        .tag {
+            background: #f1f5f9;
+            color: #475569;
+            padding: 0.25rem 0.75rem;
+            border-radius: 1rem;
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+        
+        .chapter-link {
+            background: #2563eb;
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .chapter-link:hover {
+            background: #1d4ed8;
+            color: white;
+            text-decoration: none;
+        }
+        
+        .learning-path {
+            margin-bottom: 3rem;
+        }
+        
+        .path-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .path-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+        
+        .foundation .path-icon {
+            background: linear-gradient(135deg, #74b9ff, #0984e3);
+        }
+        
+        .application .path-icon {
+            background: linear-gradient(135deg, #fd79a8, #e84393);
+        }
+        
+        .advanced .path-icon {
+            background: linear-gradient(135deg, #00b894, #00a085);
+        }
+        
+        .path-title {
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin: 0;
+        }
+        
+        .foundation .path-title {
+            color: #74b9ff;
+        }
+        
+        .application .path-title {
+            color: #fd79a8;
+        }
+        
+        .advanced .path-title {
+            color: #00b894;
+        }
+        
+        .btn-secondary {
+            background: #f1f5f9;
+            color: #475569;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-secondary:hover {
+            background: #e2e8f0;
+            text-decoration: none;
+            color: #475569;
+        }
+        
+        .text-center {
+            text-align: center;
+        }
+        
+        .mt-4 {
+            margin-top: 1.5rem;
+        }
+        
+        .mt-5 {
+            margin-top: 3rem;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+    </style>
+</head>
+<body>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-laptop-code"></i>
+                <span>PathSathi</span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="../../index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link active">Class 8 CS</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../class9/index.html" class="nav-link">Class 9</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../../index.html#contact" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Class Header -->
+    <section class="class-header">
+        <div class="container">
+            <div class="text-center">
+                <h1 class="hero-title">💻 Class 8 Computer Science</h1>
+                <p class="hero-subtitle">Master the fundamentals of computing, programming, and digital literacy through our comprehensive curriculum designed specifically for Class 8 students.</p>
+                <div class="mt-4">
+                    <span class="tag" style="background: rgba(255,255,255,0.2); color: white; font-size: 1rem;">19 Chapters</span>
+                    <span class="tag" style="background: rgba(255,255,255,0.2); color: white; font-size: 1rem; margin-left: 1rem;">Complete Coverage</span>
+                    <span class="tag" style="background: rgba(255,255,255,0.2); color: white; font-size: 1rem; margin-left: 1rem;">Programming</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chapters Section -->
+    <section class="chapters-section">
+        <div class="container">
+            <h2 class="section-title">Course Chapters</h2>
+            <p class="section-subtitle">Click on any chapter to access detailed notes, examples, and learning materials</p>
+            
+            <!-- Foundation Chapters -->
+            <div class="learning-path foundation">
+                <div class="path-header">
+                </div>
+                <div class="chapters-grid">
+                
+                    <!-- Chapter 1 -->
+                    <div class="chapter-card foundation">
+                        <div class="chapter-number">1</div>
+                        <h3 class="chapter-title">🖥️ Fundamental of Computer</h3>
+                        <p class="chapter-description">Introduction to basic computer concepts, components, and their functions in modern computing.</p>
+                        <div class="chapter-meta">
+                            <div class="chapter-tags">
+                                <span class="tag">Computer Basics</span>
+                                <span class="tag">Components</span>
+                                <span class="tag">IPO Cycle</span>
+                            </div>
+                            <a href="chapters/chapter1.html" class="chapter-link">
+                                Read Chapter
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Chapter 2 -->
+                    <div class="chapter-card foundation">
+                        <div class="chapter-number">2</div>
+                        <h3 class="chapter-title">🔢 Concept of Number System</h3>
+                        <p class="chapter-description">Understanding binary, decimal, octal, and hexadecimal number systems used in computers.</p>
+                        <div class="chapter-meta">
+                            <div class="chapter-tags">
+                                <span class="tag">Binary</span>
+                                <span class="tag">Decimal</span>
+                                <span class="tag">Conversion</span>
+                            </div>
+                            <a href="chapters/chapter2.html" class="chapter-link">
+                                Read Chapter
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Chapter 3 -->
+                    <div class="chapter-card foundation">
+                        <div class="chapter-number">3</div>
+                        <h3 class="chapter-title">📊 Spreadsheet Software</h3>
+                        <p class="chapter-description">Learn to create, format, and work with spreadsheets for data analysis and calculations.</p>
+                        <div class="chapter-meta">
+                            <div class="chapter-tags">
+                                <span class="tag">Excel</span>
+                                <span class="tag">Formulas</span>
+                                <span class="tag">Data Analysis</span>
+                            </div>
+                            <a href="chapters/chapter3.html" class="chapter-link">
+                                Read Chapter
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Chapter 4 -->
+                    <div class="chapter-card foundation">
+                        <div class="chapter-number">4</div>
+                        <h3 class="chapter-title">⚖️ Cyber Law and Computer Ethics</h3>
+                        <p class="chapter-description">Understanding legal and ethical aspects of computer usage and digital citizenship.</p>
+                        <div class="chapter-meta">
+                            <div class="chapter-tags">
+                                <span class="tag">Cyber Law</span>
+                                <span class="tag">Ethics</span>
+                                <span class="tag">Digital Rights</span>
+                            </div>
+                            <a href="chapters/chapter4.html" class="chapter-link">
+                                Read Chapter
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Chapter 5 -->
+                    <div class="chapter-card foundation">
+                        <div class="chapter-number">5</div>
+                        <h3 class="chapter-title">📜 History of Computer</h3>
+                        <p class="chapter-description">Journey through the evolution of computers from ancient calculating devices to modern systems.</p>
+                        <div class="chapter-meta">
+                            <div class="chapter-tags">
+                                <span class="tag">Computer History</span>
+                                <span class="tag">Evolution</span>
+                                <span class="tag">Pioneers</span>
+                            </div>
+                            <a href="chapters/chapter5.html" class="chapter-link">
+                                Read Chapter
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Chapter 6 -->
+                    <div class="chapter-card foundation">
+                        <div class="chapter-number">6</div>
+                        <h3 class="chapter-title">🚀 Generations of Computer</h3>
+                        <p class="chapter-description">Explore the five generations of computers and their technological advancements.</p>
+                        <div class="chapter-meta">
+                            <div class="chapter-tags">
+                                <span class="tag">Generations</span>
+                                <span class="tag">Technology</span>
+                                <span class="tag">Advancement</span>
+                            </div>
+                            <a href="chapters/chapter6.html" class="chapter-link">
+                                Read Chapter
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Application Chapters -->
+            <div class="learning-path application">
+                <div class="path-header">
+                </div>
+                <div class="chapters-grid">
+                    <!-- Chapter 7 -->
+                    <div class="chapter-card application">
+                        <div class="chapter-number">7</div>
+                        <h3 class="chapter-title">🌐 Web Page Designing with HTML</h3>
+                        <p class="chapter-description">Learn to create and design web pages using HTML markup language and basic styling.</p>
+                        <div class="chapter-meta">
+                            <div class="chapter-tags">
+                                <span class="tag">HTML</span>
+                                <span class="tag">Web Design</span>
+                                <span class="tag">Tags</span>
+                            </div>
+                            <a href="chapters/chapter7.html" class="chapter-link">
+                                Read Chapter
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Chapter 8 -->
+                    <div class="chapter-card application">
+                        <div class="chapter-number">8</div>
+                        <h3 class="chapter-title">🛡️ ICT and Cyber Crime</h3>
+                        <p class="chapter-description">Understanding Information and Communication Technology and protection against cyber crimes.</p>
+                        <div class="chapter-meta">
+                            <div class="chapter-tags">
+                                <span class="tag">ICT</span>
+                                <span class="tag">Cyber Crime</span>
+                                <span class="tag">Security</span>
+                            </div>
+                            <a href="chapters/chapter8.html" class="chapter-link">
+                                Read Chapter
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Chapter 9 -->
+                    <div class="chapter-card application">
+                        <div class="chapter-number">9</div>
+                        <h3 class="chapter-title">🎨 Multimedia and Applications</h3>
+                        <p class="chapter-description">Explore multimedia elements, tools, and their applications in various fields.</p>
+                        <div class="chapter-meta">
+                            <div class="chapter-tags">
+                                <span class="tag">Multimedia</span>
+                                <span class="tag">Graphics</span>
+                                <span class="tag">Audio/Video</span>
+                            </div>
+                            <a href="chapters/chapter9.html" class="chapter-link">
+                                Read Chapter
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Chapter 10 -->
+                    <div class="chapter-card application">
+                        <div class="chapter-number">10</div>
+                        <h3 class="chapter-title">💻 Types of Computer</h3>
+                        <p class="chapter-description">Classification of computers based on size, purpose, and functionality.</p>
+                        <div class="chapter-meta">
+                            <div class="chapter-tags">
+                                <span class="tag">Computer Types</span>
+                                <span class="tag">Classification</span>
+                                <span class="tag">Purpose</span>
+                            </div>
+                            <a href="chapters/chapter10.html" class="chapter-link">
+                                Read Chapter
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Chapter 11 -->
+                    <div class="chapter-card application">
+                        <div class="chapter-number">11</div>
+                        <h3 class="chapter-title">🔧 Computer Hardware and Software</h3>
+                        <p class="chapter-description">Detailed study of computer components and different types of software systems.</p>
+                        <div class="chapter-meta">
+                            <div class="chapter-tags">
+                                <span class="tag">Hardware</span>
+                                <span class="tag">Software</span>
+                                <span class="tag">Components</span>
+                            </div>
+                            <a href="chapters/chapter11.html" class="chapter-link">
+                                Read Chapter
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Advanced Chapters -->
+            <div class="learning-path advanced">
+                <div class="path-header">
+                </div>
+                <div class="chapters-grid">
+                    <!-- Chapter 12 -->
+                    <div class="chapter-card advanced">
+                        <div class="chapter-number">12</div>
+                        <h3 class="chapter-title">🛠️ Programming Tools and Techniques</h3>
+                        <p class="chapter-description">Introduction to programming concepts, tools, and problem-solving techniques.</p>
+                        <div class="chapter-meta">
+                            <div class="chapter-tags">
+                                <span class="tag">Programming</span>
+                                <span class="tag">Problem Solving</span>
+                                <span class="tag">Tools</span>
+                            </div>
+                            <a href="chapters/chapter12.html" class="chapter-link">
+                                Read Chapter
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Chapter 13 -->
+                    <div class="chapter-card advanced">
+                        <div class="chapter-number">13</div>
+                        <h3 class="chapter-title">⚡ Introduction to QBasic</h3>
+                        <p class="chapter-description">Learn basic programming using QBasic language with practical examples and exercises.</p>
+                        <div class="chapter-meta">
+                            <div class="chapter-tags">
+                                <span class="tag">QBasic</span>
+                                <span class="tag">Programming</span>
+                                <span class="tag">Examples</span>
+                            </div>
+                            <a href="chapters/chapter13.html" class="chapter-link">
+                                Read Chapter
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Chapter 14 -->
+                    <div class="chapter-card advanced">
+                        <div class="chapter-number">14</div>
+                        <h3 class="chapter-title">🦠 Computer Virus & Protection</h3>
+                        <p class="chapter-description">Understanding computer viruses, their types, effects, and protection methods.</p>
+                        <div class="chapter-meta">
+                            <div class="chapter-tags">
+                                <span class="tag">Virus</span>
+                                <span class="tag">Security</span>
+                                <span class="tag">Protection</span>
+                            </div>
+                            <a href="chapters/chapter14.html" class="chapter-link">
+                                Read Chapter
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Chapter 15 -->
+                    <div class="chapter-card advanced">
+                        <div class="chapter-number">15</div>
+                        <h3 class="chapter-title">🌐 Data Communication & Network</h3>
+                        <p class="chapter-description">Basics of data transmission, networking concepts, and communication protocols.</p>
+                        <div class="chapter-meta">
+                            <div class="chapter-tags">
+                                <span class="tag">Networking</span>
+                                <span class="tag">Data Transmission</span>
+                                <span class="tag">Protocols</span>
+                            </div>
+                            <a href="chapters/chapter15.html" class="chapter-link">
+                                Read Chapter
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Chapter 16 -->
+                    <div class="chapter-card advanced">
+                        <div class="chapter-number">16</div>
+                        <h3 class="chapter-title">🎨 Computer Graphics</h3>
+                        <p class="chapter-description">Fundamentals of computer graphics, image processing, and graphics software.</p>
+                        <div class="chapter-meta">
+                            <div class="chapter-tags">
+                                <span class="tag">Graphics</span>
+                                <span class="tag">Image Processing</span>
+                                <span class="tag">Design</span>
+                            </div>
+                            <a href="chapters/chapter16.html" class="chapter-link">
+                                Read Chapter
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Chapter 17 -->
+                    <div class="chapter-card advanced">
+                        <div class="chapter-number">17</div>
+                        <h3 class="chapter-title">💾 Operating System</h3>
+                        <p class="chapter-description">Understanding the role, types, and functions of operating systems in computers.</p>
+                        <div class="chapter-meta">
+                            <div class="chapter-tags">
+                                <span class="tag">OS</span>
+                                <span class="tag">System Software</span>
+                                <span class="tag">Functions</span>
+                            </div>
+                            <a href="chapters/chapter17.html" class="chapter-link">
+                                Read Chapter
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Chapter 18 -->
+                    <div class="chapter-card advanced">
+                        <div class="chapter-number">18</div>
+                        <h3 class="chapter-title">📝 Word Processing Software</h3>
+                        <p class="chapter-description">Master document creation, editing, formatting, and advanced features of word processors.</p>
+                        <div class="chapter-meta">
+                            <div class="chapter-tags">
+                                <span class="tag">Word Processing</span>
+                                <span class="tag">Formatting</span>
+                                <span class="tag">Documents</span>
+                            </div>
+                            <a href="chapters/chapter18.html" class="chapter-link">
+                                Read Chapter
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Chapter 19 -->
+                    <div class="chapter-card advanced">
+                        <div class="chapter-number">19</div>
+                        <h3 class="chapter-title">📽️ Presentation Software</h3>
+                        <p class="chapter-description">Create engaging presentations with multimedia elements and professional design.</p>
+                        <div class="chapter-meta">
+                            <div class="chapter-tags">
+                                <span class="tag">Presentations</span>
+                                <span class="tag">Multimedia</span>
+                                <span class="tag">Design</span>
+                            </div>
+                            <a href="chapters/chapter19.html" class="chapter-link">
+                                Read Chapter
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+            </div>
+
+            <!-- Study Resources -->
+            <div class="mt-5 text-center">
+                <h3 style="margin-bottom: 2rem; color: #1e293b; font-size: 1.8rem;">Additional Resources</h3>
+                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                    <a href="#" class="btn-secondary">
+                        <i class="fas fa-file-pdf"></i>
+                        Download Notes PDF
+                    </a>
+                    <a href="#" class="btn-secondary">
+                        <i class="fas fa-video"></i>
+                        Video Lectures
+                    </a>
+                    <a href="#" class="btn-secondary">
+                        <i class="fas fa-question-circle"></i>
+                        Practice Questions
+                    </a>
+                    <a href="#" class="btn-secondary">
+                        <i class="fas fa-code"></i>
+                        Code Examples
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-bottom: 2rem;">
+                <div class="footer-section">
+                    <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 1rem;">
+                        <i class="fas fa-laptop-code" style="font-size: 1.5rem; color: #667eea;"></i>
+                        <span style="font-size: 1.2rem; font-weight: 600; color: #1e293b;">CS Hub</span>
+                    </div>
+                    <p style="color: #64748b; line-height: 1.6;">Empowering students with quality computer science education and comprehensive learning resources.</p>
+                </div>
+                <div class="footer-section">
+                    <h3 style="color: #1e293b; margin-bottom: 1rem;">Quick Links</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 0.5rem;"><a href="../../index.html" style="color: #64748b; text-decoration: none;">Home</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="index.html" style="color: #64748b; text-decoration: none;">Class 8 CS</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="../class9/index.html" style="color: #64748b; text-decoration: none;">Class 9</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="../../index.html#contact" style="color: #64748b; text-decoration: none;">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3 style="color: #1e293b; margin-bottom: 1rem;">Contact Info</h3>
+                    <p style="color: #64748b; margin-bottom: 0.5rem;"><i class="fas fa-envelope" style="margin-right: 8px;"></i> info@cshub.com</p>
+                    <p style="color: #64748b;"><i class="fas fa-phone" style="margin-right: 8px;"></i> +1 (555) 123-4567</p>
+                </div>
+            </div>
+            <div style="border-top: 1px solid #e2e8f0; padding-top: 1rem; text-align: center;">
+                <p style="color: #64748b; margin: 0;">&copy; 2025 PathSathi</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../js/main.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS if available
+        if (typeof AOS !== 'undefined') {
+            AOS.init({
+                duration: 800,
+                once: true
+            });
+        }
+    </script>
+</body>
+</html>

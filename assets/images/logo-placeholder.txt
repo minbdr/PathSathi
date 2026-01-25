@@ -1,0 +1,7 @@
+<!-- This is a placeholder for logo.png -->
+<!-- You should replace this with an actual logo image file -->
+<!-- Recommended size: 80x80 pixels, PNG format -->
+<!-- Example: A circular logo with your website name or educational symbol -->
+
+<!-- For now, you can use a placeholder from online services: -->
+<!-- https://via.placeholder.com/80x80/3498db/ffffff?text=Logo -->

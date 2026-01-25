@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 2: Concept of Number System - Class 8 CS - EduSite</title>
+    <link rel="stylesheet" href="../../../css/style.css">
+    <link rel="icon" type="image/png" href="https://via.placeholder.com/32x32/3498db/ffffff?text=E">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <img src="https://via.placeholder.com/80x80/3498db/ffffff?text=Logo" alt="Logo" class="logo-img">
+                    <span class="logo-text">EduSite</span>
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="../../../index.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../../../index.html#classes" class="nav-link">Classes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../../../index.html#about" class="nav-link">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../../../index.html#contact" class="nav-link">Contact</a>
+                    </li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="content-area">
+            <div class="container">
+                <a href="../index.html" class="back-link">← Back to Class 8 Computer Science</a>
+                
+                <div class="chapter-content">
+                    <h1>Chapter 2: Concept of Number System</h1>
+                    
+                    <h2>What is a Number System?</h2>
+                    <p>A number system is a method of representing numbers using a specific set of symbols or digits. It defines how numbers are written and interpreted in different bases.</p>
+                    
+                    <h2>Types of Number Systems</h2>
+                    
+                    <h3>1. Decimal Number System (Base 10)</h3>
+                    <ul>
+                        <li><strong>Base:</strong> 10</li>
+                        <li><strong>Digits used:</strong> 0, 1, 2, 3, 4, 5, 6, 7, 8, 9</li>
+                        <li><strong>Example:</strong> 245₁₀</li>
+                        <li><strong>Usage:</strong> Most commonly used by humans in daily life</li>
+                    </ul>
+                    
+                    <h3>2. Binary Number System (Base 2)</h3>
+                    <ul>
+                        <li><strong>Base:</strong> 2</li>
+                        <li><strong>Digits used:</strong> 0, 1</li>
+                        <li><strong>Example:</strong> 11010₂</li>
+                        <li><strong>Usage:</strong> Used by computers internally</li>
+                    </ul>
+                    
+                    <h3>3. Octal Number System (Base 8)</h3>
+                    <ul>
+                        <li><strong>Base:</strong> 8</li>
+                        <li><strong>Digits used:</strong> 0, 1, 2, 3, 4, 5, 6, 7</li>
+                        <li><strong>Example:</strong> 347₈</li>
+                        <li><strong>Usage:</strong> Used as shorthand for binary in programming</li>
+                    </ul>
+                    
+                    <h3>4. Hexadecimal Number System (Base 16)</h3>
+                    <ul>
+                        <li><strong>Base:</strong> 16</li>
+                        <li><strong>Digits used:</strong> 0-9, A, B, C, D, E, F</li>
+                        <li><strong>Example:</strong> 2AF₁₆</li>
+                        <li><strong>Usage:</strong> Used in programming and memory addressing</li>
+                    </ul>
+                    
+                    <h2>Why Binary is Important for Computers?</h2>
+                    <p>Computers use binary system because:</p>
+                    <ul>
+                        <li>Electronic circuits can easily represent two states: ON (1) and OFF (0)</li>
+                        <li>Simple and reliable for electronic switches</li>
+                        <li>Less prone to errors in transmission</li>
+                        <li>All computer operations are based on binary logic</li>
+                    </ul>
+                    
+                    <h2>Number System Conversions</h2>
+                    
+                    <h3>Decimal to Binary Conversion</h3>
+                    <p><strong>Method:</strong> Divide by 2 and write remainders in reverse order</p>
+                    <p><strong>Example:</strong> Convert 25₁₀ to binary</p>
+                    <pre style="background-color: #f8f9fa; padding: 1rem; border-radius: 5px; overflow-x: auto;">
+25 ÷ 2 = 12 remainder 1
+12 ÷ 2 = 6  remainder 0
+6  ÷ 2 = 3  remainder 0
+3  ÷ 2 = 1  remainder 1
+1  ÷ 2 = 0  remainder 1
+
+Reading from bottom to top: 11001₂
+                    </pre>
+                    
+                    <h3>Binary to Decimal Conversion</h3>
+                    <p><strong>Method:</strong> Multiply each digit by powers of 2 and add</p>
+                    <p><strong>Example:</strong> Convert 1101₂ to decimal</p>
+                    <pre style="background-color: #f8f9fa; padding: 1rem; border-radius: 5px; overflow-x: auto;">
+1101₂ = 1×2³ + 1×2² + 0×2¹ + 1×2⁰
+      = 1×8 + 1×4 + 0×2 + 1×1
+      = 8 + 4 + 0 + 1
+      = 13₁₀
+                    </pre>
+                    
+                    <h3>Decimal to Octal Conversion</h3>
+                    <p><strong>Method:</strong> Divide by 8 and write remainders in reverse order</p>
+                    
+                    <h3>Decimal to Hexadecimal Conversion</h3>
+                    <p><strong>Method:</strong> Divide by 16 and write remainders in reverse order</p>
+                    <p><strong>Note:</strong> Use A=10, B=11, C=12, D=13, E=14, F=15</p>
+                    
+                    <h2>Hexadecimal Digit Values</h2>
+                    <table style="width: 100%; border-collapse: collapse; margin: 1rem 0;">
+                        <tr style="background-color: #f8f9fa;">
+                            <th style="border: 1px solid #ddd; padding: 8px;">Hex</th>
+                            <th style="border: 1px solid #ddd; padding: 8px;">Decimal</th>
+                            <th style="border: 1px solid #ddd; padding: 8px;">Binary</th>
+                        </tr>
+                        <tr>
+                            <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">A</td>
+                            <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">10</td>
+                            <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">1010</td>
+                        </tr>
+                        <tr>
+                            <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">B</td>
+                            <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">11</td>
+                            <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">1011</td>
+                        </tr>
+                        <tr>
+                            <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">C</td>
+                            <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">12</td>
+                            <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">1100</td>
+                        </tr>
+                        <tr>
+                            <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">D</td>
+                            <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">13</td>
+                            <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">1101</td>
+                        </tr>
+                        <tr>
+                            <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">E</td>
+                            <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">14</td>
+                            <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">1110</td>
+                        </tr>
+                        <tr>
+                            <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">F</td>
+                            <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">15</td>
+                            <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">1111</td>
+                        </tr>
+                    </table>
+                    
+                    <h2>Applications of Different Number Systems</h2>
+                    <ul>
+                        <li><strong>Binary:</strong> Computer programming, digital circuits, data storage</li>
+                        <li><strong>Octal:</strong> File permissions in Unix/Linux systems</li>
+                        <li><strong>Hexadecimal:</strong> Memory addresses, color codes in web design, assembly language</li>
+                        <li><strong>Decimal:</strong> General mathematics, business calculations, everyday use</li>
+                    </ul>
+                    
+                    <div style="margin-top: 2rem; padding: 1.5rem; background-color: #fff3cd; border-left: 4px solid #ffc107; border-radius: 5px;">
+                        <h3>⚠️ Important Tips</h3>
+                        <ul>
+                            <li>Always practice conversion problems to master the techniques</li>
+                            <li>Remember: Binary uses only 0s and 1s</li>
+                            <li>In hexadecimal, A-F represent values 10-15</li>
+                            <li>Each hexadecimal digit represents 4 binary digits</li>
+                        </ul>
+                    </div>
+                    
+                    <h2>Practice Exercises</h2>
+                    <ol>
+                        <li>Convert the following decimal numbers to binary: 15, 32, 45, 128</li>
+                        <li>Convert these binary numbers to decimal: 1010, 11001, 101010</li>
+                        <li>Convert 255₁₀ to hexadecimal</li>
+                        <li>What is the decimal equivalent of FF₁₆?</li>
+                        <li>Why do computers use binary number system?</li>
+                    </ol>
+                </div>
+                
+                <div style="margin-top: 3rem; text-align: center; display: flex; justify-content: space-between; gap: 1rem;">
+                    <a href="chapter1.html" class="class-link">← Chapter 1</a>
+                    <a href="chapter3.html" class="cta-button">Next: Chapter 3 - Spreadsheet →</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 EduSite. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../../../js/main.js"></script>
+</body>
+</html>

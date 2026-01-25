@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 13: Introduction to Qbasic - Class 8 CS - EduSite</title>
+    <link rel="stylesheet" href="../../../css/style.css">
+    <link rel="icon" type="image/png" href="https://via.placeholder.com/32x32/3498db/ffffff?text=E">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <img src="https://via.placeholder.com/80x80/3498db/ffffff?text=Logo" alt="Logo" class="logo-img">
+                    <span class="logo-text">EduSite</span>
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="../../../index.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../../../index.html#classes" class="nav-link">Classes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../../../index.html#about" class="nav-link">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../../../index.html#contact" class="nav-link">Contact</a>
+                    </li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="content-area">
+            <div class="container">
+                <a href="../index.html" class="back-link">← Back to Class 8 Computer Science</a>
+                
+                <div class="chapter-content">
+                    <h1>Chapter 13: Introduction to QBasic</h1>
+                    
+                    <h2>What is QBasic?</h2>
+                    <p><strong>QBasic (Quick Beginner's All-purpose Symbolic Instruction Code)</strong> is a high-level programming language developed by Microsoft. It's an ideal language for beginners to learn programming concepts.</p>
+                    
+                    <h2>Features of QBasic</h2>
+                    <ul>
+                        <li>Easy to learn and understand</li>
+                        <li>English-like syntax</li>
+                        <li>Interactive environment</li>
+                        <li>Built-in editor and debugger</li>
+                        <li>Immediate execution of commands</li>
+                        <li>Good for beginners</li>
+                    </ul>
+                    
+                    <h2>QBasic Environment</h2>
+                    <p>The QBasic environment consists of:</p>
+                    <ul>
+                        <li><strong>Menu Bar:</strong> Contains File, Edit, View, Search, Run, Debug, Options, Help</li>
+                        <li><strong>Editor Window:</strong> Where you write your programs</li>
+                        <li><strong>Immediate Window:</strong> For testing commands directly</li>
+                        <li><strong>Output Screen:</strong> Shows program results</li>
+                    </ul>
+                    
+                    <h2>Basic QBasic Commands</h2>
+                    
+                    <h3>1. PRINT Statement</h3>
+                    <p>Used to display output on the screen.</p>
+                    <pre style="background-color: #f8f9fa; padding: 1rem; border-radius: 5px; overflow-x: auto;">
+PRINT "Hello World"
+PRINT "My name is John"
+PRINT 5 + 3
+                    </pre>
+                    
+                    <h3>2. CLS Statement</h3>
+                    <p>Clears the screen.</p>
+                    <pre style="background-color: #f8f9fa; padding: 1rem; border-radius: 5px; overflow-x: auto;">
+CLS
+                    </pre>
+                    
+                    <h3>3. REM Statement</h3>
+                    <p>Used to add comments in the program.</p>
+                    <pre style="background-color: #f8f9fa; padding: 1rem; border-radius: 5px; overflow-x: auto;">
+REM This is a comment
+' This is also a comment
+                    </pre>
+                    
+                    <h2>Variables in QBasic</h2>
+                    <p>Variables are used to store data. QBasic supports different types of variables:</p>
+                    
+                    <h3>Variable Types</h3>
+                    <ul>
+                        <li><strong>Numeric Variables:</strong> Store numbers (A, B, NUM, X1)</li>
+                        <li><strong>String Variables:</strong> Store text (NAME$, ADDRESS$)</li>
+                    </ul>
+                    
+                    <h3>Rules for Variable Names</h3>
+                    <ul>
+                        <li>Must start with a letter</li>
+                        <li>Can contain letters, numbers, and periods</li>
+                        <li>Cannot exceed 40 characters</li>
+                        <li>Cannot be a reserved word</li>
+                        <li>String variables must end with $ sign</li>
+                    </ul>
+                    
+                    <h2>INPUT Statement</h2>
+                    <p>Used to accept input from the user.</p>
+                    <pre style="background-color: #f8f9fa; padding: 1rem; border-radius: 5px; overflow-x: auto;">
+INPUT "Enter your name: "; NAME$
+INPUT "Enter your age: "; AGE
+PRINT "Hello "; NAME$
+PRINT "You are "; AGE; " years old"
+                    </pre>
+                    
+                    <h2>Arithmetic Operators</h2>
+                    <table style="width: 100%; border-collapse: collapse; margin: 1rem 0;">
+                        <tr style="background-color: #f8f9fa;">
+                            <th style="border: 1px solid #ddd; padding: 8px;">Operator</th>
+                            <th style="border: 1px solid #ddd; padding: 8px;">Operation</th>
+                            <th style="border: 1px solid #ddd; padding: 8px;">Example</th>
+                        </tr>
+                        <tr>
+                            <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">+</td>
+                            <td style="border: 1px solid #ddd; padding: 8px;">Addition</td>
+                            <td style="border: 1px solid #ddd; padding: 8px;">5 + 3 = 8</td>
+                        </tr>
+                        <tr>
+                            <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">-</td>
+                            <td style="border: 1px solid #ddd; padding: 8px;">Subtraction</td>
+                            <td style="border: 1px solid #ddd; padding: 8px;">5 - 3 = 2</td>
+                        </tr>
+                        <tr>
+                            <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">*</td>
+                            <td style="border: 1px solid #ddd; padding: 8px;">Multiplication</td>
+                            <td style="border: 1px solid #ddd; padding: 8px;">5 * 3 = 15</td>
+                        </tr>
+                        <tr>
+                            <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">/</td>
+                            <td style="border: 1px solid #ddd; padding: 8px;">Division</td>
+                            <td style="border: 1px solid #ddd; padding: 8px;">6 / 3 = 2</td>
+                        </tr>
+                        <tr>
+                            <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">^</td>
+                            <td style="border: 1px solid #ddd; padding: 8px;">Exponentiation</td>
+                            <td style="border: 1px solid #ddd; padding: 8px;">2 ^ 3 = 8</td>
+                        </tr>
+                    </table>
+                    
+                    <h2>Sample Programs</h2>
+                    
+                    <h3>Program 1: Addition of Two Numbers</h3>
+                    <pre style="background-color: #f8f9fa; padding: 1rem; border-radius: 5px; overflow-x: auto; border-left: 4px solid #007bff;">
+CLS
+INPUT "Enter first number: "; A
+INPUT "Enter second number: "; B
+SUM = A + B
+PRINT "The sum is: "; SUM
+END
+                    </pre>
+                    
+                    <h3>Program 2: Area of Rectangle</h3>
+                    <pre style="background-color: #f8f9fa; padding: 1rem; border-radius: 5px; overflow-x: auto; border-left: 4px solid #28a745;">
+CLS
+INPUT "Enter length: "; LENGTH
+INPUT "Enter width: "; WIDTH
+AREA = LENGTH * WIDTH
+PRINT "Area of rectangle is: "; AREA
+END
+                    </pre>
+                    
+                    <h3>Program 3: Simple Calculator</h3>
+                    <pre style="background-color: #f8f9fa; padding: 1rem; border-radius: 5px; overflow-x: auto; border-left: 4px solid #dc3545;">
+CLS
+INPUT "Enter first number: "; NUM1
+INPUT "Enter second number: "; NUM2
+PRINT "Addition: "; NUM1 + NUM2
+PRINT "Subtraction: "; NUM1 - NUM2
+PRINT "Multiplication: "; NUM1 * NUM2
+PRINT "Division: "; NUM1 / NUM2
+END
+                    </pre>
+                    
+                    <h2>Built-in Functions</h2>
+                    <ul>
+                        <li><strong>ABS(x):</strong> Returns absolute value</li>
+                        <li><strong>SQR(x):</strong> Returns square root</li>
+                        <li><strong>INT(x):</strong> Returns integer part</li>
+                        <li><strong>RND:</strong> Returns random number between 0 and 1</li>
+                        <li><strong>LEN(string$):</strong> Returns length of string</li>
+                    </ul>
+                    
+                    <h2>Running a QBasic Program</h2>
+                    <ol>
+                        <li>Type your program in the editor</li>
+                        <li>Press F5 or go to Run menu and select Start</li>
+                        <li>The program will execute and show output</li>
+                        <li>Press any key to return to the editor</li>
+                    </ol>
+                    
+                    <div style="margin-top: 2rem; padding: 1.5rem; background-color: #e8f4fd; border-left: 4px solid #3498db; border-radius: 5px;">
+                        <h3>💡 Programming Tips</h3>
+                        <ul>
+                            <li>Always use meaningful variable names</li>
+                            <li>Add comments to explain your code</li>
+                            <li>Test your programs with different inputs</li>
+                            <li>Use proper indentation for readability</li>
+                            <li>End your programs with END statement</li>
+                        </ul>
+                    </div>
+                    
+                    <h2>Practice Exercises</h2>
+                    <ol>
+                        <li>Write a program to find the area and perimeter of a circle.</li>
+                        <li>Create a program to convert temperature from Celsius to Fahrenheit.</li>
+                        <li>Write a program to calculate simple interest.</li>
+                        <li>Create a program to find the average of three numbers.</li>
+                        <li>Write a program that accepts your name and displays a welcome message.</li>
+                    </ol>
+                </div>
+                
+                <div style="margin-top: 3rem; text-align: center; display: flex; justify-content: space-between; gap: 1rem;">
+                    <a href="chapter12.html" class="class-link">← Chapter 12</a>
+                    <a href="chapter14.html" class="cta-button">Next: Chapter 14 - Computer Virus →</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 EduSite. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../../../js/main.js"></script>
+</body>
+</html>

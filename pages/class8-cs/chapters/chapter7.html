@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 7: Web Page Designing with HTML - Class 8 CS - EduSite</title>
+    <link rel="stylesheet" href="../../../css/style.css">
+    <link rel="icon" type="image/png" href="https://via.placeholder.com/32x32/3498db/ffffff?text=E">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <img src="https://via.placeholder.com/80x80/3498db/ffffff?text=Logo" alt="Logo" class="logo-img">
+                    <span class="logo-text">EduSite</span>
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="../../../index.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../../../index.html#classes" class="nav-link">Classes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../../../index.html#about" class="nav-link">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../../../index.html#contact" class="nav-link">Contact</a>
+                    </li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="content-area">
+            <div class="container">
+                <a href="../index.html" class="back-link">← Back to Class 8 Computer Science</a>
+                
+                <div class="chapter-content">
+                    <h1>Chapter 7: Web Page Designing with HTML</h1>
+                    
+                    <h2>What is HTML?</h2>
+                    <p><strong>HTML (HyperText Markup Language)</strong> is a standard markup language used to create web pages. It describes the structure and content of a web page using special codes called tags.</p>
+                    
+                    <h2>Key Features of HTML</h2>
+                    <ul>
+                        <li>Platform independent</li>
+                        <li>Easy to learn and use</li>
+                        <li>Supports multimedia elements</li>
+                        <li>Case insensitive</li>
+                        <li>Works with all web browsers</li>
+                    </ul>
+                    
+                    <h2>Basic Structure of HTML Document</h2>
+                    <pre style="background-color: #f8f9fa; padding: 1rem; border-radius: 5px; overflow-x: auto; border-left: 4px solid #007bff;">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;Page Title&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;h1&gt;My First Heading&lt;/h1&gt;
+        &lt;p&gt;My first paragraph.&lt;/p&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+                    </pre>
+                    
+                    <h2>HTML Tags and Elements</h2>
+                    
+                    <h3>What are HTML Tags?</h3>
+                    <p>HTML tags are keywords enclosed in angle brackets (&lt; &gt;). Most tags come in pairs:</p>
+                    <ul>
+                        <li><strong>Opening tag:</strong> &lt;tagname&gt;</li>
+                        <li><strong>Closing tag:</strong> &lt;/tagname&gt;</li>
+                        <li><strong>Content:</strong> Text between opening and closing tags</li>
+                    </ul>
+                    
+                    <h3>Basic HTML Tags</h3>
+                    
+                    <h4>Document Structure Tags</h4>
+                    <ul>
+                        <li><strong>&lt;html&gt;:</strong> Root element of HTML page</li>
+                        <li><strong>&lt;head&gt;:</strong> Contains metadata about the document</li>
+                        <li><strong>&lt;title&gt;:</strong> Sets the title of the web page</li>
+                        <li><strong>&lt;body&gt;:</strong> Contains the visible content</li>
+                    </ul>
+                    
+                    <h4>Heading Tags</h4>
+                    <pre style="background-color: #f8f9fa; padding: 1rem; border-radius: 5px; overflow-x: auto;">
+&lt;h1&gt;Largest Heading&lt;/h1&gt;
+&lt;h2&gt;Second Largest&lt;/h2&gt;
+&lt;h3&gt;Third Largest&lt;/h3&gt;
+&lt;h4&gt;Fourth Largest&lt;/h4&gt;
+&lt;h5&gt;Fifth Largest&lt;/h5&gt;
+&lt;h6&gt;Smallest Heading&lt;/h6&gt;
+                    </pre>
+                    
+                    <h4>Paragraph and Text Tags</h4>
+                    <ul>
+                        <li><strong>&lt;p&gt;:</strong> Defines a paragraph</li>
+                        <li><strong>&lt;br&gt;:</strong> Line break (single tag)</li>
+                        <li><strong>&lt;hr&gt;:</strong> Horizontal rule/line (single tag)</li>
+                        <li><strong>&lt;b&gt;:</strong> Bold text</li>
+                        <li><strong>&lt;i&gt;:</strong> Italic text</li>
+                        <li><strong>&lt;u&gt;:</strong> Underlined text</li>
+                    </ul>
+                    
+                    <h4>List Tags</h4>
+                    <pre style="background-color: #f8f9fa; padding: 1rem; border-radius: 5px; overflow-x: auto;">
+&lt;!-- Unordered List --&gt;
+&lt;ul&gt;
+    &lt;li&gt;Item 1&lt;/li&gt;
+    &lt;li&gt;Item 2&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!-- Ordered List --&gt;
+&lt;ol&gt;
+    &lt;li&gt;First item&lt;/li&gt;
+    &lt;li&gt;Second item&lt;/li&gt;
+&lt;/ol&gt;
+                    </pre>
+                    
+                    <h4>Link and Image Tags</h4>
+                    <pre style="background-color: #f8f9fa; padding: 1rem; border-radius: 5px; overflow-x: auto;">
+&lt;!-- Link --&gt;
+&lt;a href="https://www.example.com"&gt;Visit Example.com&lt;/a&gt;
+
+&lt;!-- Image --&gt;
+&lt;img src="image.jpg" alt="Description of image"&gt;
+                    </pre>
+                    
+                    <h2>HTML Attributes</h2>
+                    <p>Attributes provide additional information about HTML elements:</p>
+                    <ul>
+                        <li><strong>href:</strong> Specifies the URL for links</li>
+                        <li><strong>src:</strong> Specifies the source file for images</li>
+                        <li><strong>alt:</strong> Alternative text for images</li>
+                        <li><strong>width & height:</strong> Dimensions of elements</li>
+                        <li><strong>title:</strong> Tooltip text</li>
+                    </ul>
+                    
+                    <h2>Creating Tables in HTML</h2>
+                    <pre style="background-color: #f8f9fa; padding: 1rem; border-radius: 5px; overflow-x: auto;">
+&lt;table border="1"&gt;
+    &lt;tr&gt;
+        &lt;th&gt;Name&lt;/th&gt;
+        &lt;th&gt;Age&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;John&lt;/td&gt;
+        &lt;td&gt;25&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+                    </pre>
+                    
+                    <h2>HTML Forms</h2>
+                    <pre style="background-color: #f8f9fa; padding: 1rem; border-radius: 5px; overflow-x: auto;">
+&lt;form&gt;
+    &lt;label&gt;Name:&lt;/label&gt;
+    &lt;input type="text" name="username"&gt;&lt;br&gt;&lt;br&gt;
+    
+    &lt;label&gt;Email:&lt;/label&gt;
+    &lt;input type="email" name="email"&gt;&lt;br&gt;&lt;br&gt;
+    
+    &lt;input type="submit" value="Submit"&gt;
+&lt;/form&gt;
+                    </pre>
+                    
+                    <h2>Complete Example</h2>
+                    <pre style="background-color: #f8f9fa; padding: 1rem; border-radius: 5px; overflow-x: auto; border-left: 4px solid #28a745;">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;My School Website&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Welcome to ABC School&lt;/h1&gt;
+    &lt;hr&gt;
+    
+    &lt;h2&gt;About Us&lt;/h2&gt;
+    &lt;p&gt;We are a &lt;b&gt;leading educational institution&lt;/b&gt; 
+       committed to excellence in education.&lt;/p&gt;
+    
+    &lt;h2&gt;Subjects Offered&lt;/h2&gt;
+    &lt;ul&gt;
+        &lt;li&gt;Mathematics&lt;/li&gt;
+        &lt;li&gt;Science&lt;/li&gt;
+        &lt;li&gt;Computer Science&lt;/li&gt;
+        &lt;li&gt;English&lt;/li&gt;
+    &lt;/ul&gt;
+    
+    &lt;h2&gt;Contact Us&lt;/h2&gt;
+    &lt;p&gt;Visit our website: 
+       &lt;a href="http://www.abcschool.com"&gt;www.abcschool.com&lt;/a&gt;
+    &lt;/p&gt;
+    
+    &lt;img src="school.jpg" alt="School Building" width="300"&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+                    </pre>
+                    
+                    <h2>Best Practices for HTML</h2>
+                    <ul>
+                        <li>Always use proper HTML structure</li>
+                        <li>Include DOCTYPE declaration</li>
+                        <li>Use meaningful tag names</li>
+                        <li>Always close your tags</li>
+                        <li>Use alt attributes for images</li>
+                        <li>Keep your code organized and indented</li>
+                        <li>Validate your HTML code</li>
+                    </ul>
+                    
+                    <div style="margin-top: 2rem; padding: 1.5rem; background-color: #d4edda; border-left: 4px solid #28a745; border-radius: 5px;">
+                        <h3>✅ Practice Activity</h3>
+                        <p>Create a simple web page about yourself including:</p>
+                        <ul>
+                            <li>Your name as the main heading</li>
+                            <li>A paragraph about your hobbies</li>
+                            <li>A list of your favorite subjects</li>
+                            <li>A link to your favorite website</li>
+                        </ul>
+                    </div>
+                    
+                    <h2>Assignment Questions</h2>
+                    <ol>
+                        <li>What is HTML? List its main features.</li>
+                        <li>Explain the basic structure of an HTML document.</li>
+                        <li>Write HTML code to create a table with student information.</li>
+                        <li>How do you insert images and links in HTML?</li>
+                        <li>Create a simple form with name, email, and submit button.</li>
+                    </ol>
+                </div>
+                
+                <div style="margin-top: 3rem; text-align: center; display: flex; justify-content: space-between; gap: 1rem;">
+                    <a href="chapter6.html" class="class-link">← Chapter 6</a>
+                    <a href="chapter8.html" class="cta-button">Next: Chapter 8 - ICT & Cyber Crime →</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 EduSite. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../../../js/main.js"></script>
+</body>
+</html>
