@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 14: Computer Virus and Protection - Class 8 Computer Science</title>
+    <link rel="stylesheet" href="../../../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <a href="../../../index.html" class="nav-brand">
+                    <i class="fas fa-laptop-code"></i>
+                    PathSathi
+                </a>
+                <div class="nav-menu">
+                    <a href="../../../index.html" class="nav-link">Home</a>
+                    <a href="../index.html" class="nav-link">Class 8</a>
+                    <a href="../../../index.html#contact" class="nav-link">Contact</a>
+                </div>
+                <div class="nav-toggle" id="mobile-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="content-area">
+            <div class="container">
+                <a href="../index.html" class="back-link">← Back to Class 8 Computer Science</a>
+                
+                <div class="chapter-content">
+                    <h1 style="color: #2563eb; font-size: 2.5rem; font-weight: 700; margin-bottom: 2rem; text-align: center; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">🛡️ Chapter 14: Computer Virus and Protection</h1> 
+                    <p>Welcome to the complete guide on Computer Virus and Protection. In this chapter, we will learn about computer viruses, their types, how they spread, their harmful effects, and most importantly, how to protect our computers from these dangerous programs.</p>
+                    
+                    <h2 style="color: #1e293b; font-size: 1.8rem; font-weight: 600; margin: 2rem 0 1rem 0; padding-bottom: 0.5rem; border-bottom: 3px solid #3b82f6; display: flex; align-items: center; gap: 10px;"><i class="fas fa-virus" style="color: #3b82f6;"></i>What is a Computer Virus?</h2>
+                    <p>A computer virus is a type of malicious software (malware) program that is designed to harm or disrupt a computer's normal operation. Just like a biological virus spreads in the human body and makes us sick, a computer virus spreads from one computer to another and causes damage.</p>
+                    <p><b><i>A computer virus is a harmful program that can copy itself and spread to other files and computers without the user's permission or knowledge.</i></b></p>
+                    <p>The term "virus" was first used by Frederick Cohen in 1983. Computer viruses are created by programmers with bad intentions. These programs can:</p>
+                    <ul>
+                        <li>Copy themselves and spread to other files</li>
+                        <li>Damage or delete important data</li>
+                        <li>Slow down computer performance</li>
+                        <li>Steal personal information</li>
+                        <li>Corrupt system files and make the computer unusable</li>
+                    </ul>
+
+                    <h2 style="color: #1e293b; font-size: 1.8rem; font-weight: 600; margin: 2rem 0 1rem 0; padding-bottom: 0.5rem; border-bottom: 3px solid #10b981; display: flex; align-items: center; gap: 10px;"><i class="fas fa-shield-virus" style="color: #10b981;"></i>Characteristics of Computer Virus</h2>
+                    <p>Computer viruses have several distinct features that make them dangerous:</p>
+                    <ul>
+                        <li><strong>Self-Replication:</strong> 
+                        <ul>
+                            <li>A virus can make copies of itself automatically.</li>
+                            <li>It attaches itself to other programs and files.</li>
+                            <li>This is how it spreads quickly throughout the system.</li>
+                        </ul></li>
+                        <li><strong>Infection:</strong> 
+                        <ul>
+                            <li>Viruses attach themselves to clean files and programs.</li>
+                            <li>When the infected file runs, the virus becomes active.</li>
+                            <li>It then spreads to other files in the system.</li>
+                        </ul></li>
+                        <li><strong>Harmful Nature:</strong> 
+                         <ul>
+                            <li>Viruses are designed to cause damage to the computer.</li>
+                            <li>They can delete files, corrupt data, or crash the system.</li>
+                            <li>Some viruses steal sensitive information like passwords.</li>
+                        </ul></li>
+                        <li><strong>Hidden Operation:</strong> 
+                        <ul>
+                            <li>Viruses work secretly in the background.</li>
+                            <li>Users often don't know their computer is infected.</li>
+                            <li>They hide themselves to avoid detection.</li>
+                        </ul></li>
+                        <li><strong>Activation Trigger:</strong> 
+                        <ul>
+                            <li>Some viruses activate immediately when a file is opened.</li>
+                            <li>Others wait for a specific date or event to activate.</li>
+                            <li>For example, some viruses activate on a particular date.</li>
+                        </ul></li>
+                    </ul>
+
+                    <h2 style="color: #1e293b; font-size: 1.8rem; font-weight: 600; margin: 2rem 0 1rem 0; padding-bottom: 0.5rem; border-bottom: 3px solid #8b5cf6; display: flex; align-items: center; gap: 10px;"><i class="fas fa-bug" style="color: #8b5cf6;"></i>Types of Computer Viruses</h2>
+                    <p>There are many different types of computer viruses. Each type works in a different way:</p>
+                    <ul>
+                        <li><strong>Boot Sector Virus:</strong>
+                            <p>Boot Sector Virus is the type of virus that infects the boot sector of a hard disk or USB drive. The boot sector is the part of the storage device that loads first when the computer starts. When infected, the virus loads into memory before the operating system, making it very difficult to remove.</p>
+                            <ul>
+                                <li>Example: Michelangelo virus</li>
+                                <li>It spreads through infected bootable USB drives or hard disks</li>
+                            </ul>
+                        </li>
+                        <li><strong>File Infector Virus:</strong>
+                            <p>The virus that infects and attaches themselves to executable files (files with .exe, .com extensions). When you run the infected program, the virus becomes active and spreads to other executable files on the computer.</p>
+                            <ul>
+                                <li>Example: CIH virus (Chernobyl virus)</li>
+                                <li>It can damage the computer's BIOS and make the computer unbootable</li>
+                            </ul>
+                        </li>
+                        <li><strong>Macro Virus:</strong>
+                            <p>Macro viruses are written in macro languages used in software applications like Microsoft Word or Excel. They infect documents and spread when the infected document is opened. These are very common because many people share documents.</p>
+                            <ul>
+                                <li>Example: Melissa virus</li>
+                                <li>It spreads through email attachments</li>
+                                <li>It can send copies of itself to contacts in your email address book</li>
+                            </ul>
+                        </li>
+                        <li><strong>Multipartite Virus:</strong>
+                            <p>This is a complex virus that can infect both the boot sector and program files. It spreads in multiple ways, making it very difficult to detect and remove.</p>
+                            <ul>
+                                <li>Example: Invader virus</li>
+                                <li>It combines features of boot sector and file infector viruses</li>
+                            </ul>
+                        </li>
+                        <li><strong>Polymorphic Virus:</strong>
+                            <p>These viruses can change their code each time they infect a new file. This makes them very difficult to detect because antivirus programs look for known virus patterns. </p>
+                            <ul>
+                                <li>They constantly change their appearance</li>
+                                <li>Very difficult for traditional antivirus software to detect</li>
+                            </ul>
+                            <P><br> <strong>"Polymorphic virus is dangerous". Justify:</strong><br>
+                            A polymorphic virus is dangerous because it changes its code whenever it spreads. This makes it hard for antivirus software to detect and remove it. It can remain hidden in the system and damage files or steal data. Therefore, its ability to disguise itself makes it very harmful.</P>
+                        </li>
+                        <li><strong>System Infector Virus</strong>
+                            <p>A system infector virus is a type of computer virus that infects important system files or the operating system of a computer. When these files are affected, the computer may not start properly or may work very slowly. It spreads when infected system files are copied to another computer. Because it targets core system files, it can cause serious damage.</p>
+                            <ul>
+                                <li>Example: Jerusalem virus</li>
+                                <li>It can cause the computer to crash on certain dates</li>
+                            </ul>
+                        <li><strong>Message Carrying Virus:</strong>
+                            <p>A message carrying virus is a virus that displays unwanted messages, pictures, or warnings on the computer screen after infecting it. It may not always damage data, but it disturbs the user and shows that the system is infected. These viruses are often created for prank or nuisance purposes. However, they can still reduce system performance.</p>
+                            <ul>
+                                <li>Example: Melissa virus</li>
+                            </ul>
+                     </li>
+                    <h2 style="color: #1e293b; font-size: 1.8rem; font-weight: 600; margin: 2rem 0 1rem 0; padding-bottom: 0.5rem; border-bottom: 3px solid #f59e0b; display: flex; align-items: center; gap: 10px;"><i class="fas fa-share-alt" style="color: #f59e0b;"></i>How Do Viruses Spread?</h2>
+                    <p>Understanding how viruses spread is important to protect your computer. Here are the common ways viruses spread:</p>
+                    <ul>
+                        <li><strong>Email Attachments:</strong>
+                            <p>One of the most common ways viruses spread is through email attachments. Hackers send emails with infected files attached. When users open these attachments, the virus gets activated.</p>
+                            <ul>
+                                <li>Never open attachments from unknown senders</li>
+                                <li>Be careful even with emails from known contacts if they look suspicious</li>
+                            </ul>
+                        </li>
+                        <li><strong>Infected Websites:</strong>
+                            <p>Some websites are designed to download viruses automatically when you visit them. These are often disguised as free software download sites or adult content sites.</p>
+                            <ul>
+                                <li>Avoid visiting suspicious websites</li>
+                                <li>Don't click on pop-up advertisements</li>
+                            </ul>
+                        </li>
+                        <li><strong>USB Drives and External Storage:</strong>
+                            <p>When you insert an infected USB drive or external hard disk into your computer, viruses can spread automatically. This is especially common in shared computers.</p>
+                            <ul>
+                                <li>Scan USB drives before opening files</li>
+                                <li>Disable AutoRun feature in Windows</li>
+                            </ul>
+                        </li>
+                        <li><strong>Pirated Software:</strong>
+                            <p>Downloaded software from unauthorized sources often contains viruses. People who use cracked or pirated software are at high risk.</p>
+                            <ul>
+                                <li>Always download software from official websites</li>
+                                <li>Avoid using cracked or pirated programs</li>
+                            </ul>
+                        </li>
+                        <li><strong>Network Sharing:</strong>
+                            <p>In networks where files and folders are shared, viruses can spread from one computer to another very quickly.</p>
+                            <ul>
+                                <li>Use proper network security</li>
+                                <li>Protect shared folders with passwords</li>
+                            </ul>
+                        </li>
+                        <li><strong>Social Media Links:</strong>
+                            <p>Hackers often post malicious links on social media platforms. Clicking on these links can download viruses or redirect to infected websites.</p>
+                            <ul>
+                                <li>Don't click on suspicious links on Facebook, Instagram, etc.</li>
+                                <li>Verify before clicking on shortened URLs</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <h2 style="color: #1e293b; font-size: 1.8rem; font-weight: 600; margin: 2rem 0 1rem 0; padding-bottom: 0.5rem; border-bottom: 3px solid #ef4444; display: flex; align-items: center; gap: 10px;"><i class="fas fa-exclamation-triangle" style="color: #ef4444;"></i>Symptoms of Virus Infection</h2>
+                    <p>How do you know if your computer is infected with a virus? Here are some common symptoms:</p>
+                    <ul>
+                        <li><strong>Slow Performance:</strong> The computer becomes very slow and takes a long time to start or open programs</li>
+                        <li><strong>Frequent Crashes:</strong> Programs crash unexpectedly or the computer freezes often</li>
+                        <li><strong>Unusual Messages:</strong> Strange error messages or pop-ups appear on the screen</li>
+                        <li><strong>Missing Files:</strong> Files disappear or get corrupted without any reason</li>
+                        <li><strong>Programs Opening Automatically:</strong> Programs start running on their own without you opening them</li>
+                        <li><strong>Changed Homepage:</strong> Your browser's homepage changes to a different website</li>
+                        <li><strong>Excessive Hard Disk Activity:</strong> The hard disk light keeps blinking even when you're not using the computer</li>
+                        <li><strong>Disabled Antivirus:</strong> Your antivirus software stops working or gets disabled</li>
+                        <li><strong>New Programs:</strong> Unknown programs appear on your computer that you didn't install</li>
+                        <li><strong>Email Issues:</strong> Your contacts receive spam emails from your account that you didn't send</li>
+                    </ul>
+
+                    <h2 style="color: #1e293b; font-size: 1.8rem; font-weight: 600; margin: 2rem 0 1rem 0; padding-bottom: 0.5rem; border-bottom: 3px solid #06b6d4; display: flex; align-items: center; gap: 10px;"><i class="fas fa-shield-alt" style="color: #06b6d4;"></i>Protection Against Computer Viruses</h2>
+                    <p>Prevention is better than cure. Here are important steps to protect your computer from viruses:</p>
+                    
+                    <h4 style="color: #1e293b; font-size: 1.6rem; font-weight: 600; margin: 2rem 0 1rem 0; padding-bottom: 0.5rem; border-bottom: 3px solid #06b6d4;">1. Install Antivirus Software</h4>
+                    <ul>
+                        <li>Install a good and reliable antivirus program on your computer</li>
+                        <li>Popular antivirus programs include:
+                            <ul>
+                                <li>Norton Antivirus</li>
+                                <li>McAfee</li>
+                                <li>Kaspersky</li>
+                                <li>AVG</li>
+                                <li>Avast</li>
+                                <li>Windows Defender (built into Windows)</li>
+                            </ul>
+                        </li>
+                        <li>Keep your antivirus updated with the latest virus definitions</li>
+                        <li>Schedule regular automatic scans</li>
+                    </ul>
+
+                    <h4 style="color: #1e293b; font-size: 1.6rem; font-weight: 600; margin: 2rem 0 1rem 0; padding-bottom: 0.5rem; border-bottom: 3px solid #06b6d4;">2. Keep Your Operating System Updated</h4>
+                    <ul>
+                        <li>Always install the latest security updates for your operating system</li>
+                        <li>Enable automatic updates in Windows or other OS</li>
+                        <li>Updates patch security vulnerabilities that viruses can exploit</li>
+                    </ul>
+
+                    <h4 style="color: #1e293b; font-size: 1.6rem; font-weight: 600; margin: 2rem 0 1rem 0; padding-bottom: 0.5rem; border-bottom: 3px solid #06b6d4;">3. Be Careful with Email Attachments</h4>
+                    <ul>
+                        <li>Don't open email attachments from unknown senders</li>
+                        <li>Even if you know the sender, be cautious if the email seems unusual</li>
+                        <li>Scan attachments with antivirus before opening</li>
+                        <li>Delete suspicious emails immediately</li>
+                    </ul>
+
+                    <h4 style="color: #1e293b; font-size: 1.6rem; font-weight: 600; margin: 2rem 0 1rem 0; padding-bottom: 0.5rem; border-bottom: 3px solid #06b6d4;">4. Use Strong Passwords</h4>
+                    <ul>
+                        <li>Create strong passwords with a combination of letters, numbers, and special characters</li>
+                        <li>Don't use the same password for multiple accounts</li>
+                        <li>Change passwords regularly</li>
+                        <li>Never share your passwords with others</li>
+                    </ul>
+
+                    <h4 style="color: #1e293b; font-size: 1.6rem; font-weight: 600; margin: 2rem 0 1rem 0; padding-bottom: 0.5rem; border-bottom: 3px solid #06b6d4;">5. Scan External Devices</h4>
+                    <ul>
+                        <li>Always scan USB drives, external hard disks, and memory cards before using them</li>
+                        <li>Disable the AutoRun feature to prevent automatic virus execution</li>
+                        <li>Be careful when using USB drives from other people</li>
+                    </ul>
+
+                    <h4 style="color: #1e293b; font-size: 1.6rem; font-weight: 600; margin: 2rem 0 1rem 0; padding-bottom: 0.5rem; border-bottom: 3px solid #06b6d4;">6. Download from Trusted Sources</h4>
+                    <ul>
+                        <li>Only download software from official and trusted websites</li>
+                        <li>Avoid downloading pirated software and games</li>
+                        <li>Read user reviews before downloading</li>
+                        <li>Check file extensions before opening downloaded files</li>
+                    </ul>
+
+                    <h4 style="color: #1e293b; font-size: 1.6rem; font-weight: 600; margin: 2rem 0 1rem 0; padding-bottom: 0.5rem; border-bottom: 3px solid #06b6d4;">7. Use Firewall</h4>
+                    <ul>
+                        <li>Enable the built-in firewall on your computer</li>
+                        <li>Firewall acts as a barrier between your computer and the internet</li>
+                        <li>It blocks unauthorized access to your system</li>
+                    </ul>
+
+                    <h4 style="color: #1e293b; font-size: 1.6rem; font-weight: 600; margin: 2rem 0 1rem 0; padding-bottom: 0.5rem; border-bottom: 3px solid #06b6d4;">8. Regular Backups</h4>
+                    <ul>
+                        <li>Regularly backup your important data</li>
+                        <li>Store backups on external drives or cloud storage</li>
+                        <li>If your computer gets infected, you won't lose important files</li>
+                    </ul>
+
+                    <h4 style="color: #1e293b; font-size: 1.6rem; font-weight: 600; margin: 2rem 0 1rem 0; padding-bottom: 0.5rem; border-bottom: 3px solid #06b6d4;">9. Be Cautious on Social Media</h4>
+                    <ul>
+                        <li>Don't click on suspicious links shared on social media</li>
+                        <li>Be careful about what you share online</li>
+                        <li>Verify before clicking on shortened URLs</li>
+                    </ul>
+
+                    <h4 style="color: #1e293b; font-size: 1.6rem; font-weight: 600; margin: 2rem 0 1rem 0; padding-bottom: 0.5rem; border-bottom: 3px solid #06b6d4;">10. Educate Yourself</h4>
+                    <ul>
+                        <li>Stay informed about new types of viruses and threats</li>
+                        <li>Learn about safe computing practices</li>
+                        <li>Teach family members about computer security</li>
+                    </ul>
+
+                    <h2 style="color: #1e293b; font-size: 1.8rem; font-weight: 600; margin: 2rem 0 1rem 0; padding-bottom: 0.5rem; border-bottom: 3px solid #22c55e; display: flex; align-items: center; gap: 10px;"><i class="fas fa-user-md" style="color: #22c55e;"></i>What to Do If Your Computer Gets Infected?</h2>
+                    <p>If you suspect your computer is infected with a virus, follow these steps:</p>
+                    <ol>
+                        <li><strong>Disconnect from Internet:</strong> Immediately disconnect your computer from the internet to prevent the virus from spreading or downloading more malware</li>
+                        <li><strong>Run Antivirus Scan:</strong> Run a full system scan with your antivirus software</li>
+                        <li><strong>Use Safe Mode:</strong> Boot your computer in Safe Mode and run the antivirus scan. Safe Mode loads only essential programs, making it easier to detect and remove viruses</li>
+                        <li><strong>Delete Infected Files:</strong> If the antivirus detects infected files, quarantine or delete them as recommended</li>
+                        <li><strong>Update Everything:</strong> Update your operating system, antivirus, and all software to the latest versions</li>
+                        <li><strong>Change Passwords:</strong> Change all your important passwords, especially for email and banking accounts</li>
+                        <li><strong>Restore from Backup:</strong> If necessary, restore important files from a clean backup</li>
+                        <li><strong>Seek Professional Help:</strong> If the problem persists, consult a computer technician or IT professional</li>
+                    </ol>
+
+                    <h2 style="color: #1e293b; font-size: 1.8rem; font-weight: 600; margin: 2rem 0 1rem 0; padding-bottom: 0.5rem; border-bottom: 3px solid #a855f7; display: flex; align-items: center; gap: 10px;"><i class="fas fa-lightbulb" style="color: #a855f7;"></i>Important Terms to Remember</h2>
+                    <ul>
+                        <li><strong>Malware:</strong> Short for "malicious software" - any software designed to harm or exploit computers</li>
+                        <li><strong>Antivirus:</strong> Software designed to detect, prevent, and remove viruses and other malware</li>
+                        <li><strong>Firewall:</strong> A security system that monitors and controls incoming and outgoing network traffic</li>
+                        <li><strong>Phishing:</strong> A cyber attack where hackers try to trick users into revealing sensitive information</li>
+                        <li><strong>Encryption:</strong> The process of converting data into a coded form to prevent unauthorized access</li>
+                        <li><strong>Quarantine:</strong> Isolating infected files so they cannot harm the system</li>
+                        <li><strong>Virus Definition:</strong> A database of known viruses that antivirus software uses to identify threats</li>
+                        <li><strong>Hacker:</strong> A person who uses computers to gain unauthorized access to data</li>
+                    </ul>
+
+                    <div style="margin-top: 2rem; padding: 1.5rem; background-color: #fff3cd; border-left: 4px solid #ffc107; border-radius: 5px;">
+                        <h3>⚠️ Important Safety Tips</h3>
+                        <ul>
+                            <li>Never click on links in emails from unknown senders</li>
+                            <li>Don't download software from untrusted websites</li>
+                            <li>Always keep your antivirus updated</li>
+                            <li>Scan all USB drives before using them</li>
+                            <li>Create regular backups of important data</li>
+                            <li>Use strong and unique passwords for different accounts</li>
+                            <li>Be suspicious of offers that seem too good to be true</li>
+                        </ul>
+                    </div>
+
+                    <div style="margin-top: 2rem; padding: 1.5rem; background-color: #e8f4fd; border-left: 4px solid #3498db; border-radius: 5px;">
+                        <h3>💡 Key Points to Remember</h3>
+                        <ul>
+                            <li>A virus is a malicious program that can replicate itself and spread</li>
+                            <li>Viruses can damage files, steal data, and slow down computers</li>
+                            <li>Different types of viruses work in different ways</li>
+                            <li>Installing antivirus software is essential for protection</li>
+                            <li>Prevention is the best defense against viruses</li>
+                            <li>Regular updates and backups are crucial for security</li>
+                            <li>Be cautious when opening emails, downloading files, and browsing websites</li>
+                        </ul>
+                    </div>
+                    
+                    <h2 style="color: #1e293b; font-size: 1.8rem; font-weight: 600; margin: 2rem 0 1rem 0; padding-bottom: 0.5rem; border-bottom: 3px solid #f97316; display: flex; align-items: center; gap: 10px;"><i class="fas fa-question" style="color: #f97316;"></i>Practice Questions</h2>
+                    <ol>
+                        <li>What is a computer virus? Explain its characteristics.</li>
+                        <li>Describe any five types of computer viruses with examples.</li>
+                        <li>How do computer viruses spread? List at least five methods.</li>
+                        <li>What are the symptoms that indicate a computer is infected with a virus?</li>
+                        <li>Explain different ways to protect a computer from viruses.</li>
+                        <li>What is antivirus software? Name any three popular antivirus programs.</li>
+                        <li>Differentiate between virus, worm, and Trojan horse.</li>
+                        <li>What steps should you take if your computer gets infected with a virus?</li>
+                        <li>Why is it important to keep your operating system and antivirus updated?</li>
+                        <li>What is ransomware? How is it different from other viruses?</li>
+                        <li>Explain the importance of creating regular backups of data.</li>
+                        <li>What is a firewall and how does it protect your computer?</li>
+                        <li>List any five safe computing practices you should follow.</li>
+                        <li>What is the difference between malware and antivirus?</li>
+                        <li>Why should you avoid downloading pirated software?</li>
+                    </ol>
+
+                    <div style="margin-top: 2rem; padding: 1.5rem; background-color: #f0fdf4; border-left: 4px solid #22c55e; border-radius: 5px;">
+                        <h3>📝 Short Answer Questions</h3>
+                        <ol>
+                            <li>Define computer virus.</li>
+                            <li>What is a boot sector virus?</li>
+                            <li>Name three types of computer viruses.</li>
+                            <li>What is spyware?</li>
+                            <li>What is a Trojan horse?</li>
+                            <li>How does ransomware work?</li>
+                            <li>What is the purpose of antivirus software?</li>
+                            <li>Why should you scan USB drives before use?</li>
+                            <li>What is a firewall?</li>
+                            <li>What is phishing?</li>
+                        </ol>
+                    </div>
+                </div>
+                
+                <div style="margin-top: 3rem; text-align: center;">
+                    <a href="../index.html" class="cta-button">← Back to Class 8 Chapters</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 PathSathi. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../../../js/main.js"></script>
+</body>
+</html>

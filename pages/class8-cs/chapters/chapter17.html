@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 17: Operating System - Class 8 Computer Science</title>
+    <link rel="stylesheet" href="../../../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <a href="../../../index.html" class="nav-brand">
+                    <i class="fas fa-laptop-code"></i>
+                    PathSathi
+                </a>
+                <div class="nav-menu">
+                    <a href="../../../index.html" class="nav-link">Home</a>
+                    <a href="../index.html" class="nav-link">Class 8</a>
+                    <a href="../../../index.html#contact" class="nav-link">Contact</a>
+                </div>
+                <div class="nav-toggle" id="mobile-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="content-area">
+            <div class="container">
+                <a href="../index.html" class="back-link">← Back to Class 8 Computer Science</a>
+                
+                <div class="chapter-content">
+                    <h1 style="color: #2563eb; font-size: 2.5rem; font-weight: 700; margin-bottom: 2rem; text-align: center; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">💻 Chapter 17: Operating System</h1>
+                    <p>Welcome to the complete guide on Operating Systems. In this chapter, we will explore the fundamental concepts of operating systems, their types, and how they manage computer resources.</p>
+                    
+                    <h2 style="color: #1e293b; font-size: 1.8rem; font-weight: 600; margin: 2rem 0 1rem 0; padding-bottom: 0.5rem; border-bottom: 3px solid #3b82f6; display: flex; align-items: center; gap: 10px;"><i class="fas fa-info-circle" style="color: #3b82f6;"></i>1. Introduction</h2>
+                    <p>An <b>Operating System (OS)</b> is a software that acts as an intermediary between computer hardware and the user. It manages all the hardware and software resources of the computer system. The operating system provides a platform for application programs to run and enables users to interact with the computer.</p>
+                    
+                    <p>Without an operating system, a computer is just a collection of hardware components that cannot perform any useful tasks. The OS is the first program that loads when a computer starts, and it continues to run until the computer is shut down.</p>
+                    
+                    <h4 style="color: #1e293b; font-size: 1.4rem; font-weight: 600; margin: 1.5rem 0 1rem 0;">Functions of an Operating System:</h4>
+                    <ul>
+                        <li><strong>Process Management:</strong> Controls the execution of programs and allocates CPU time to different processes.</li>
+                        <li><strong>Memory Management:</strong> Manages the computer's primary memory (RAM) and allocates it to different programs.</li>
+                        <li><strong>File Management:</strong> Organizes and manages files and folders on storage devices.</li>
+                        <li><strong>Device Management:</strong> Controls and coordinates the use of hardware devices like printers, keyboard, and mouse.</li>
+                        <li><strong>Security:</strong> Protects the system from unauthorized access and malicious software.</li>
+                        <li><strong>User Interface:</strong> Provides a way for users to interact with the computer through GUI or command-line interface.</li>
+                    </ul>
+
+                    <h2 style="color: #1e293b; font-size: 1.8rem; font-weight: 600; margin: 2rem 0 1rem 0; padding-bottom: 0.5rem; border-bottom: 3px solid #3b82f6; display: flex; align-items: center; gap: 10px;"><i class="fas fa-layer-group" style="color: #3b82f6;"></i>2. Types of Operating System (OS)</h2>
+                    <p>Operating systems can be classified into different types based on their functionality, user interface, and usage. Here are the main types:</p>
+
+                    <h4 style="color: #1e293b; font-size: 1.4rem; font-weight: 600; margin: 1.5rem 0 1rem 0;">a) Single-User, Single-Task OS</h4>
+                    <p>This type of OS allows only one user to perform one task at a time. Early computer systems used this type of operating system.</p>
+                    <p><strong>Example:</strong> MS-DOS (Microsoft Disk Operating System)</p>
+
+                    <h4 style="color: #1e293b; font-size: 1.4rem; font-weight: 600; margin: 1.5rem 0 1rem 0;">b) Single-User, Multi-Task OS</h4>
+                    <p>This OS allows a single user to run multiple programs or tasks simultaneously. Most personal computers today use this type.</p>
+                    <p><strong>Examples:</strong> Windows 10, Windows 11, macOS, Ubuntu Linux</p>
+
+                    <h4 style="color: #1e293b; font-size: 1.4rem; font-weight: 600; margin: 1.5rem 0 1rem 0;">c) Multi-User OS</h4>
+                    <p>This type allows multiple users to access the computer system simultaneously. Each user can run their own programs independently.</p>
+                    <p><strong>Examples:</strong> Unix, Linux, Windows Server</p>
+
+                    <h4 style="color: #1e293b; font-size: 1.4rem; font-weight: 600; margin: 1.5rem 0 1rem 0;">d) Real-Time OS (RTOS)</h4>
+                    <p>Real-time operating systems are designed to process data and respond to inputs within a specific time frame. They are used in systems where timing is critical.</p>
+                    <p><strong>Examples:</strong> VxWorks, RTLinux (used in aircraft control systems, medical equipment, and industrial robots)</p>
+
+                    <h4 style="color: #1e293b; font-size: 1.4rem; font-weight: 600; margin: 1.5rem 0 1rem 0;">e) Mobile OS</h4>
+                    <p>Operating systems designed specifically for mobile devices like smartphones and tablets.</p>
+                    <p><strong>Examples:</strong> Android, iOS, Windows Mobile</p>
+
+                    <h4 style="color: #1e293b; font-size: 1.4rem; font-weight: 600; margin: 1.5rem 0 1rem 0;">f) Network OS</h4>
+                    <p>These operating systems are designed to manage network resources and provide services to multiple computers connected in a network.</p>
+                    <p><strong>Examples:</strong> Novell NetWare, Windows Server</p>
+
+                    <h2 style="color: #1e293b; font-size: 1.8rem; font-weight: 600; margin: 2rem 0 1rem 0; padding-bottom: 0.5rem; border-bottom: 3px solid #3b82f6; display: flex; align-items: center; gap: 10px;"><i class="fas fa-exchange-alt" style="color: #3b82f6;"></i>3. Difference between CUI and GUI Operating System</h2>
+                    
+                    <p>Operating systems can be categorized based on their user interface into two main types: <b>Character User Interface (CUI)</b> and <b>Graphical User Interface (GUI)</b>.</p>
+
+                    <h4 style="color: #1e293b; font-size: 1.4rem; font-weight: 600; margin: 1.5rem 0 1rem 0;">CUI (Character User Interface)</h4>
+                    <p>A CUI-based operating system uses text-based commands for user interaction. Users must type specific commands to perform tasks. It requires knowledge of command syntax.</p>
+                    <p><strong>Example:</strong> MS-DOS, Unix shell, Linux command line</p>
+
+                    <h4 style="color: #1e293b; font-size: 1.4rem; font-weight: 600; margin: 1.5rem 0 1rem 0;">GUI (Graphical User Interface)</h4>
+                    <p>A GUI-based operating system uses graphical elements like windows, icons, menus, and buttons. Users interact with the system using a mouse and keyboard in a more intuitive way.</p>
+                    <p><strong>Example:</strong> Windows, macOS, Ubuntu with GNOME</p>
+
+                    <div style="overflow-x: auto; margin: 2rem 0;">
+                        <table style="width: 100%; border-collapse: collapse; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                            <thead>
+                                <tr style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;">
+                                    <th style="padding: 1rem; text-align: left; border: 1px solid #ddd;">Aspect</th>
+                                    <th style="padding: 1rem; text-align: left; border: 1px solid #ddd;">CUI (Character User Interface)</th>
+                                    <th style="padding: 1rem; text-align: left; border: 1px solid #ddd;">GUI (Graphical User Interface)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr style="background-color: #f8f9fa;">
+                                    <td style="padding: 1rem; border: 1px solid #ddd;"><strong>Interaction</strong></td>
+                                    <td style="padding: 1rem; border: 1px solid #ddd;">Text-based commands</td>
+                                    <td style="padding: 1rem; border: 1px solid #ddd;">Graphics, icons, and mouse clicks</td>
+                                </tr>
+                                <tr style="background-color: #ffffff;">
+                                    <td style="padding: 1rem; border: 1px solid #ddd;"><strong>Ease of Use</strong></td>
+                                    <td style="padding: 1rem; border: 1px solid #ddd;">Difficult for beginners; requires command knowledge</td>
+                                    <td style="padding: 1rem; border: 1px solid #ddd;">Easy and user-friendly; intuitive for all users</td>
+                                </tr>
+                                <tr style="background-color: #f8f9fa;">
+                                    <td style="padding: 1rem; border: 1px solid #ddd;"><strong>Speed</strong></td>
+                                    <td style="padding: 1rem; border: 1px solid #ddd;">Faster execution for experienced users</td>
+                                    <td style="padding: 1rem; border: 1px solid #ddd;">Slower due to graphical elements</td>
+                                </tr>
+                                <tr style="background-color: #ffffff;">
+                                    <td style="padding: 1rem; border: 1px solid #ddd;"><strong>Memory Usage</strong></td>
+                                    <td style="padding: 1rem; border: 1px solid #ddd;">Requires less memory</td>
+                                    <td style="padding: 1rem; border: 1px solid #ddd;">Requires more memory for graphics</td>
+                                </tr>
+                                <tr style="background-color: #f8f9fa;">
+                                    <td style="padding: 1rem; border: 1px solid #ddd;"><strong>Flexibility</strong></td>
+                                    <td style="padding: 1rem; border: 1px solid #ddd;">More control and flexibility through commands</td>
+                                    <td style="padding: 1rem; border: 1px solid #ddd;">Limited flexibility; pre-defined options</td>
+                                </tr>
+                                <tr style="background-color: #ffffff;">
+                                    <td style="padding: 1rem; border: 1px solid #ddd;"><strong>Multitasking</strong></td>
+                                    <td style="padding: 1rem; border: 1px solid #ddd;">Limited or no multitasking</td>
+                                    <td style="padding: 1rem; border: 1px solid #ddd;">Excellent multitasking capabilities</td>
+                                </tr>
+                                <tr style="background-color: #f8f9fa;">
+                                    <td style="padding: 1rem; border: 1px solid #ddd;"><strong>Example</strong></td>
+                                    <td style="padding: 1rem; border: 1px solid #ddd;">MS-DOS, Unix Shell</td>
+                                    <td style="padding: 1rem; border: 1px solid #ddd;">Windows, macOS, Ubuntu</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h2 style="color: #1e293b; font-size: 1.8rem; font-weight: 600; margin: 2rem 0 1rem 0; padding-bottom: 0.5rem; border-bottom: 3px solid #3b82f6; display: flex; align-items: center; gap: 10px;"><i class="fas fa-terminal" style="color: #3b82f6;"></i>4. Microsoft Disk Operating System (MS-DOS)</h2>
+                    
+                    <p><b>MS-DOS (Microsoft Disk Operating System)</b> is a command-line based operating system developed by Microsoft in 1981. It was one of the most widely used operating systems in the 1980s and early 1990s before the introduction of graphical user interfaces.</p>
+
+                    <h4 style="color: #1e293b; font-size: 1.4rem; font-weight: 600; margin: 1.5rem 0 1rem 0;">Characteristics of MS-DOS:</h4>
+                    <ul>
+                        <li><strong>Character User Interface (CUI):</strong> MS-DOS uses text-based commands for all operations.</li>
+                        <li><strong>Single-User, Single-Task:</strong> It allows only one user to perform one task at a time.</li>
+                        <li><strong>16-bit Operating System:</strong> MS-DOS is a 16-bit operating system, which means it can handle 16 bits of data at a time.</li>
+                        <li><strong>Command-Line Interface:</strong> All tasks are performed by typing specific commands at the command prompt (C:\>).</li>
+                        <li><strong>File Management:</strong> Provides basic file management operations like creating, copying, deleting, and renaming files.</li>
+                        <li><strong>Low Memory Requirements:</strong> Requires very little memory compared to modern operating systems.</li>
+                    </ul>
+
+                    <h4 style="color: #1e293b; font-size: 1.4rem; font-weight: 600; margin: 1.5rem 0 1rem 0;">Features of MS-DOS:</h4>
+                    <ul>
+                        <li>Simple and lightweight</li>
+                        <li>Direct hardware access</li>
+                        <li>Efficient for batch processing</li>
+                        <li>Supports various disk formats (floppy disks, hard disks)</li>
+                        <li>Foundation for early Windows versions (Windows 3.1, Windows 95/98)</li>
+                    </ul>
+
+                    <h4 style="color: #1e293b; font-size: 1.4rem; font-weight: 600; margin: 1.5rem 0 1rem 0;">Some Terms Used in DOS:</h4>
+                    
+                    <div style="background-color: #f8f9fa; padding: 1.5rem; border-radius: 8px; margin: 1rem 0;">
+                        <h5 style="color: #2563eb; font-weight: 600; margin-top: 0;">1. Booting</h5>
+                        <p style="margin: 0.5rem 0;"><b>Booting</b> is the process of loading system files into the computer's memory from disk. When you turn on the computer, the operating system is loaded from the hard disk into the computer's memory (RAM). This process prepares the computer for use.</p>
+                        <p style="margin: 0.5rem 0;"><b>Types of Booting:</b></p>
+                        <ul style="margin: 0.5rem 0;">
+                            <li><strong>Cold Booting:</strong> Starting the computer by pressing the power button when it is completely off.</li>
+                            <li><strong>Warm Booting:</strong> Restarting the computer using Ctrl+Alt+Del keys or the reset button without turning off the power.</li>
+                        </ul>
+                    </div>
+
+                    <div style="background-color: #f8f9fa; padding: 1.5rem; border-radius: 8px; margin: 1rem 0;">
+                        <h5 style="color: #2563eb; font-weight: 600; margin-top: 0;">2. File</h5>
+                        <p style="margin: 0.5rem 0;">A <b>file</b> is a collection of related data or information stored on a disk with a unique name. Files can contain text, programs, images, or other types of data. In MS-DOS, every file has a name and an extension.</p>
+                        <p style="margin: 0.5rem 0;"><b>File Naming Convention:</b></p>
+                        <ul style="margin: 0.5rem 0;">
+                            <li><strong>File Name:</strong> Can be up to 8 characters long (in DOS)</li>
+                            <li><strong>Extension:</strong> Optional, up to 3 characters, separated by a dot (.)</li>
+                            <li><strong>Example:</strong> LETTER.TXT, GAME.EXE, PHOTO.JPG</li>
+                        </ul>
+                    </div>
+
+                    <div style="background-color: #f8f9fa; padding: 1.5rem; border-radius: 8px; margin: 1rem 0;">
+                        <h5 style="color: #2563eb; font-weight: 600; margin-top: 0;">3. Directory</h5>
+                        <p style="margin: 0.5rem 0;">A <b>directory</b> (also called a folder) is a container that stores files and other directories. It helps organize files in a hierarchical structure, making it easier to manage and locate them.</p>
+                        <p style="margin: 0.5rem 0;"><b>Types of Directories:</b></p>
+                        <ul style="margin: 0.5rem 0;">
+                            <li><strong>Root Directory:</strong> The main directory of a disk, represented by a backslash (\). Example: C:\</li>
+                            <li><strong>Subdirectory:</strong> A directory created inside another directory. Example: C:\WINDOWS\SYSTEM</li>
+                            <li><strong>Parent Directory:</strong> The directory that contains the current directory.</li>
+                            <li><strong>Current Directory:</strong> The directory you are currently working in.</li>
+                        </ul>
+                    </div>
+
+                    <div style="background-color: #f8f9fa; padding: 1.5rem; border-radius: 8px; margin: 1rem 0;">
+                        <h5 style="color: #2563eb; font-weight: 600; margin-top: 0;">4. Wildcards</h5>
+                        <p style="margin: 0.5rem 0;"><b>Wildcards</b> are special characters used in DOS commands to represent one or more characters in file names. They help perform operations on multiple files at once.</p>
+                        <p style="margin: 0.5rem 0;"><b>Types of Wildcards:</b></p>
+                        <ul style="margin: 0.5rem 0;">
+                            <li><strong>Asterisk (*):</strong> Represents any number of characters (zero or more).
+                                <div style="background-color: #1e1e1e; color: #d4d4d4; padding: 0.5rem; border-radius: 4px; margin: 0.5rem 0; font-family: 'Courier New', monospace; font-size: 0.9rem;">
+                                    <code>DIR *.TXT</code> (displays all files with .TXT extension)<br>
+                                    <code>DEL A*.*</code> (deletes all files starting with A)
+                                </div>
+                            </li>
+                            <li><strong>Question Mark (?):</strong> Represents a single character.
+                                <div style="background-color: #1e1e1e; color: #d4d4d4; padding: 0.5rem; border-radius: 4px; margin: 0.5rem 0; font-family: 'Courier New', monospace; font-size: 0.9rem;">
+                                    <code>DIR FILE?.TXT</code> (displays FILE1.TXT, FILE2.TXT, etc.)<br>
+                                    <code>COPY ???.DOC A:</code> (copies all 3-letter named .DOC files)
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div style="background-color: #f8f9fa; padding: 1.5rem; border-radius: 8px; margin: 1rem 0;">
+                        <h5 style="color: #2563eb; font-weight: 600; margin-top: 0;">5. Command</h5>
+                        <p style="margin: 0.5rem 0;">A <b>command</b> is an instruction given to the computer to perform a specific task. In DOS, commands are typed at the command prompt (C:\>) and executed by pressing the Enter key.</p>
+                        <p style="margin: 0.5rem 0;"><b>Structure of a DOS Command:</b></p>
+                        <ul style="margin: 0.5rem 0;">
+                            <li><strong>Command Name:</strong> The name of the command (e.g., DIR, COPY, DEL)</li>
+                            <li><strong>Parameters:</strong> Additional information needed by the command (e.g., file names, drive letters)</li>
+                            <li><strong>Switches:</strong> Optional modifiers that change how the command works (e.g., /P, /W, /S)</li>
+                        </ul>
+                        <p style="margin: 0.5rem 0;"><b>Example:</b></p>
+                        <div style="background-color: #1e1e1e; color: #d4d4d4; padding: 0.5rem; border-radius: 4px; margin: 0.5rem 0; font-family: 'Courier New', monospace; font-size: 0.9rem;">
+                            <code>DIR /P</code> (DIR is the command, /P is a switch for page-by-page display)
+                        </div>
+                    </div>
+
+                    <h2 style="color: #1e293b; font-size: 1.8rem; font-weight: 600; margin: 2rem 0 1rem 0; padding-bottom: 0.5rem; border-bottom: 3px solid #3b82f6; display: flex; align-items: center; gap: 10px;"><i class="fas fa-code" style="color: #3b82f6;"></i>5. MS-DOS Commands</h2>
+                    
+                    <p>MS-DOS commands are instructions that users type at the command prompt to perform various tasks. These commands are categorized into two types:</p>
+
+                    <h3 style="color: #1e293b; font-size: 1.6rem; font-weight: 600; margin: 1.5rem 0 1rem 0; padding-left: 1rem; border-left: 4px solid #3b82f6;">i) Internal Commands</h3>
+                    <p><b>Internal commands</b> (also called resident commands) are built into the operating system and are loaded into memory when the computer starts. These commands are always available and do not require any external files to execute.</p>
+
+                    <h4 style="color: #1e293b; font-size: 1.4rem; font-weight: 600; margin: 1.5rem 0 1rem 0;">Common Internal Commands:</h4>
+                    <ul>
+                        <li><strong>DIR:</strong> Displays a list of files and subdirectories in a directory.
+                            <div style="background-color: #1e1e1e; color: #d4d4d4; padding: 1rem; border-radius: 8px; margin: 0.5rem 0; font-family: 'Courier New', monospace;">
+                                <code>C:\>DIR</code>
+                            </div>
+                        </li>
+                        <li><strong>CD or CHDIR:</strong> Changes the current directory.
+                            <div style="background-color: #1e1e1e; color: #d4d4d4; padding: 1rem; border-radius: 8px; margin: 0.5rem 0; font-family: 'Courier New', monospace;">
+                                <code>C:\>CD WINDOWS</code>
+                            </div>
+                        </li>
+                        <li><strong>MD or MKDIR:</strong> Creates a new directory.
+                            <div style="background-color: #1e1e1e; color: #d4d4d4; padding: 1rem; border-radius: 8px; margin: 0.5rem 0; font-family: 'Courier New', monospace;">
+                                <code>C:\>MD NEWFOLDER</code>
+                            </div>
+                        </li>
+                        <li><strong>RD or RMDIR:</strong> Removes/deletes an empty directory.
+                            <div style="background-color: #1e1e1e; color: #d4d4d4; padding: 1rem; border-radius: 8px; margin: 0.5rem 0; font-family: 'Courier New', monospace;">
+                                <code>C:\>RD OLDFOLDER</code>
+                            </div>
+                        </li>
+                        <li><strong>COPY:</strong> Copies one or more files from one location to another.
+                            <div style="background-color: #1e1e1e; color: #d4d4d4; padding: 1rem; border-radius: 8px; margin: 0.5rem 0; font-family: 'Courier New', monospace;">
+                                <code>C:\>COPY FILE1.TXT D:\BACKUP</code>
+                            </div>
+                        </li>
+                        <li><strong>DEL or ERASE:</strong> Deletes one or more files.
+                            <div style="background-color: #1e1e1e; color: #d4d4d4; padding: 1rem; border-radius: 8px; margin: 0.5rem 0; font-family: 'Courier New', monospace;">
+                                <code>C:\>DEL FILE1.TXT</code>
+                            </div>
+                        </li>
+                        <li><strong>REN or RENAME:</strong> Renames a file or directory.
+                            <div style="background-color: #1e1e1e; color: #d4d4d4; padding: 1rem; border-radius: 8px; margin: 0.5rem 0; font-family: 'Courier New', monospace;">
+                                <code>C:\>REN OLDNAME.TXT NEWNAME.TXT</code>
+                            </div>
+                        </li>
+                        <li><strong>TYPE:</strong> Displays the contents of a text file.
+                            <div style="background-color: #1e1e1e; color: #d4d4d4; padding: 1rem; border-radius: 8px; margin: 0.5rem 0; font-family: 'Courier New', monospace;">
+                                <code>C:\>TYPE FILE.TXT</code>
+                            </div>
+                        </li>
+                        <li><strong>CLS:</strong> Clears the screen.
+                            <div style="background-color: #1e1e1e; color: #d4d4d4; padding: 1rem; border-radius: 8px; margin: 0.5rem 0; font-family: 'Courier New', monospace;">
+                                <code>C:\>CLS</code>
+                            </div>
+                        </li>
+                        <li><strong>DATE:</strong> Displays or sets the system date.
+                            <div style="background-color: #1e1e1e; color: #d4d4d4; padding: 1rem; border-radius: 8px; margin: 0.5rem 0; font-family: 'Courier New', monospace;">
+                                <code>C:\>DATE</code>
+                            </div>
+                        </li>
+                        <li><strong>TIME:</strong> Displays or sets the system time.
+                            <div style="background-color: #1e1e1e; color: #d4d4d4; padding: 1rem; border-radius: 8px; margin: 0.5rem 0; font-family: 'Courier New', monospace;">
+                                <code>C:\>TIME</code>
+                            </div>
+                        </li>
+                        <li><strong>VER:</strong> Displays the version of MS-DOS.
+                            <div style="background-color: #1e1e1e; color: #d4d4d4; padding: 1rem; border-radius: 8px; margin: 0.5rem 0; font-family: 'Courier New', monospace;">
+                                <code>C:\>VER</code>
+                            </div>
+                        </li>
+                        <li><strong>VOL:</strong> Displays the disk volume label and serial number.
+                            <div style="background-color: #1e1e1e; color: #d4d4d4; padding: 1rem; border-radius: 8px; margin: 0.5rem 0; font-family: 'Courier New', monospace;">
+                                <code>C:\>VOL</code>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <h3 style="color: #1e293b; font-size: 1.6rem; font-weight: 600; margin: 1.5rem 0 1rem 0; padding-left: 1rem; border-left: 4px solid #3b82f6;">ii) External Commands</h3>
+                    <p><b>External commands</b> (also called transient commands) are not built into the operating system. They are stored as separate executable files (.COM or .EXE) in the DOS directory. These commands are loaded into memory only when they are executed.</p>
+
+                    <h4 style="color: #1e293b; font-size: 1.4rem; font-weight: 600; margin: 1.5rem 0 1rem 0;">Common External Commands:</h4>
+                    <ul>
+                        <li><strong>FORMAT:</strong> Formats a disk to prepare it for storing data.
+                            <div style="background-color: #1e1e1e; color: #d4d4d4; padding: 1rem; border-radius: 8px; margin: 0.5rem 0; font-family: 'Courier New', monospace;">
+                                <code>C:\>FORMAT A:</code>
+                            </div>
+                        </li>
+                        <li><strong>XCOPY:</strong> Copies files and directory trees to another location.
+                            <div style="background-color: #1e1e1e; color: #d4d4d4; padding: 1rem; border-radius: 8px; margin: 0.5rem 0; font-family: 'Courier New', monospace;">
+                                <code>C:\>XCOPY C:\DOCS D:\BACKUP /S</code>
+                            </div>
+                        </li>
+                        <li><strong>DISKCOPY:</strong> Copies the entire contents of one floppy disk to another.
+                            <div style="background-color: #1e1e1e; color: #d4d4d4; padding: 1rem; border-radius: 8px; margin: 0.5rem 0; font-family: 'Courier New', monospace;">
+                                <code>C:\>DISKCOPY A: B:</code>
+                            </div>
+                        </li>
+                        <li><strong>CHKDSK:</strong> Checks the disk for errors and displays a status report.
+                            <div style="background-color: #1e1e1e; color: #d4d4d4; padding: 1rem; border-radius: 8px; margin: 0.5rem 0; font-family: 'Courier New', monospace;">
+                                <code>C:\>CHKDSK C:</code>
+                            </div>
+                        </li>
+                        <li><strong>LABEL:</strong> Creates, changes, or deletes the volume label of a disk.
+                            <div style="background-color: #1e1e1e; color: #d4d4d4; padding: 1rem; border-radius: 8px; margin: 0.5rem 0; font-family: 'Courier New', monospace;">
+                                <code>C:\>LABEL C: MYDISK</code>
+                            </div>
+                        </li>
+                        <li><strong>ATTRIB:</strong> Displays or changes file attributes (read-only, hidden, system, archive).
+                            <div style="background-color: #1e1e1e; color: #d4d4d4; padding: 1rem; border-radius: 8px; margin: 0.5rem 0; font-family: 'Courier New', monospace;">
+                                <code>C:\>ATTRIB +R FILE.TXT</code>
+                            </div>
+                        </li>
+                        <li><strong>TREE:</strong> Displays the directory structure of a drive or path graphically.
+                            <div style="background-color: #1e1e1e; color: #d4d4d4; padding: 1rem; border-radius: 8px; margin: 0.5rem 0; font-family: 'Courier New', monospace;">
+                                <code>C:\>TREE C:\</code>
+                            </div>
+                        </li>
+                        <li><strong>MOVE:</strong> Moves files from one directory to another.
+                            <div style="background-color: #1e1e1e; color: #d4d4d4; padding: 1rem; border-radius: 8px; margin: 0.5rem 0; font-family: 'Courier New', monospace;">
+                                <code>C:\>MOVE FILE.TXT D:\FOLDER</code>
+                            </div>
+                        </li>
+                        <li><strong>BACKUP:</strong> Backs up files from one disk to another.
+                            <div style="background-color: #1e1e1e; color: #d4d4d4; padding: 1rem; border-radius: 8px; margin: 0.5rem 0; font-family: 'Courier New', monospace;">
+                                <code>C:\>BACKUP C:\*.* A: /S</code>
+                            </div>
+                        </li>
+                        <li><strong>RESTORE:</strong> Restores files that were backed up using the BACKUP command.
+                            <div style="background-color: #1e1e1e; color: #d4d4d4; padding: 1rem; border-radius: 8px; margin: 0.5rem 0; font-family: 'Courier New', monospace;">
+                                <code>C:\>RESTORE A: C:\*.* /S</code>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <div style="overflow-x: auto; margin: 2rem 0;">
+                        <table style="width: 100%; border-collapse: collapse; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                            <thead>
+                                <tr style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;">
+                                    <th style="padding: 1rem; text-align: left; border: 1px solid #ddd;">Aspect</th>
+                                    <th style="padding: 1rem; text-align: left; border: 1px solid #ddd;">Internal Commands</th>
+                                    <th style="padding: 1rem; text-align: left; border: 1px solid #ddd;">External Commands</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr style="background-color: #f8f9fa;">
+                                    <td style="padding: 1rem; border: 1px solid #ddd;"><strong>Location</strong></td>
+                                    <td style="padding: 1rem; border: 1px solid #ddd;">Built into COMMAND.COM</td>
+                                    <td style="padding: 1rem; border: 1px solid #ddd;">Stored as separate files (.COM/.EXE)</td>
+                                </tr>
+                                <tr style="background-color: #ffffff;">
+                                    <td style="padding: 1rem; border: 1px solid #ddd;"><strong>Memory</strong></td>
+                                    <td style="padding: 1rem; border: 1px solid #ddd;">Always loaded in memory</td>
+                                    <td style="padding: 1rem; border: 1px solid #ddd;">Loaded only when executed</td>
+                                </tr>
+                                <tr style="background-color: #f8f9fa;">
+                                    <td style="padding: 1rem; border: 1px solid #ddd;"><strong>Speed</strong></td>
+                                    <td style="padding: 1rem; border: 1px solid #ddd;">Faster execution</td>
+                                    <td style="padding: 1rem; border: 1px solid #ddd;">Slower execution</td>
+                                </tr>
+                                <tr style="background-color: #ffffff;">
+                                    <td style="padding: 1rem; border: 1px solid #ddd;"><strong>File Required</strong></td>
+                                    <td style="padding: 1rem; border: 1px solid #ddd;">No separate file needed</td>
+                                    <td style="padding: 1rem; border: 1px solid #ddd;">Requires external file to execute</td>
+                                </tr>
+                                <tr style="background-color: #f8f9fa;">
+                                    <td style="padding: 1rem; border: 1px solid #ddd;"><strong>Examples</strong></td>
+                                    <td style="padding: 1rem; border: 1px solid #ddd;">DIR, CD, COPY, DEL, CLS, DATE, TIME</td>
+                                    <td style="padding: 1rem; border: 1px solid #ddd;">FORMAT, XCOPY, CHKDSK, ATTRIB, TREE</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h2 style="color: #1e293b; font-size: 1.8rem; font-weight: 600; margin: 2rem 0 1rem 0; padding-bottom: 0.5rem; border-bottom: 3px solid #3b82f6; display: flex; align-items: center; gap: 10px;"><i class="fab fa-windows" style="color: #3b82f6;"></i>6. MS Windows</h2>
+                    
+                    <p><b>Microsoft Windows</b> (commonly known as Windows) is a series of graphical operating systems developed by Microsoft. It is the most widely used operating system for personal computers worldwide. Windows provides a user-friendly GUI (Graphical User Interface) that makes it easy for users to interact with the computer.</p>
+
+                    <h4 style="color: #1e293b; font-size: 1.4rem; font-weight: 600; margin: 1.5rem 0 1rem 0;">History of Windows:</h4>
+                    <ul>
+                        <li><strong>Windows 1.0 (1985):</strong> The first version of Windows, introduced as a graphical extension to MS-DOS.</li>
+                        <li><strong>Windows 3.1 (1992):</strong> Gained popularity with improved interface and functionality.</li>
+                        <li><strong>Windows 95 (1995):</strong> Introduced the Start Menu, taskbar, and revolutionary user interface.</li>
+                        <li><strong>Windows 98 (1998):</strong> Enhanced with better hardware support and Internet integration.</li>
+                        <li><strong>Windows XP (2001):</strong> One of the most successful versions with improved stability and performance.</li>
+                        <li><strong>Windows Vista (2007):</strong> Introduced Aero interface with visual effects.</li>
+                        <li><strong>Windows 7 (2009):</strong> Highly popular, with improved performance and user experience.</li>
+                        <li><strong>Windows 8 (2012):</strong> Introduced touch-friendly Metro interface.</li>
+                        <li><strong>Windows 10 (2015):</strong> Unified interface for all devices with regular updates.</li>
+                        <li><strong>Windows 11 (2021):</strong> Latest version with modern design and enhanced features.</li>
+                    </ul>
+
+                    <h4 style="color: #1e293b; font-size: 1.4rem; font-weight: 600; margin: 1.5rem 0 1rem 0;">Features of MS Windows:</h4>
+                    <ul>
+                        <li><strong>Graphical User Interface (GUI):</strong> Easy-to-use visual interface with windows, icons, and menus.</li>
+                        <li><strong>Multitasking:</strong> Ability to run multiple programs simultaneously.</li>
+                        <li><strong>Plug and Play:</strong> Automatic detection and configuration of hardware devices.</li>
+                        <li><strong>File Management:</strong> Windows Explorer/File Explorer for managing files and folders.</li>
+                        <li><strong>Networking:</strong> Built-in networking capabilities for internet and local network access.</li>
+                        <li><strong>Security:</strong> Windows Defender, firewall, and user account control for system protection.</li>
+                        <li><strong>Multimedia Support:</strong> Built-in support for audio, video, and graphics.</li>
+                        <li><strong>Application Support:</strong> Compatible with millions of software applications.</li>
+                        <li><strong>Regular Updates:</strong> Continuous security and feature updates from Microsoft.</li>
+                        <li><strong>User-Friendly:</strong> Intuitive design suitable for all types of users.</li>
+                    </ul>
+
+                    <h4 style="color: #1e293b; font-size: 1.4rem; font-weight: 600; margin: 1.5rem 0 1rem 0;">Components of Windows Desktop:</h4>
+                    <ul>
+                        <li><strong>Desktop:</strong> The main screen where icons, files, and folders are displayed.</li>
+                        <li><strong>Start Menu:</strong> Provides access to programs, settings, and power options.</li>
+                        <li><strong>Taskbar:</strong> Shows running programs and quick access icons.</li>
+                        <li><strong>System Tray:</strong> Displays system icons like volume, network, and date/time.</li>
+                        <li><strong>Icons:</strong> Graphical representations of programs, files, or folders.</li>
+                        <li><strong>Windows:</strong> Rectangular frames that display application content.</li>
+                        <li><strong>File Explorer:</strong> Tool for browsing and managing files and folders.</li>
+                        <li><strong>Recycle Bin:</strong> Temporary storage for deleted files.</li>
+                    </ul>
+
+                    <h4 style="color: #1e293b; font-size: 1.4rem; font-weight: 600; margin: 1.5rem 0 1rem 0;">Advantages of MS Windows:</h4>
+                    <ul>
+                        <li>User-friendly and easy to learn</li>
+                        <li>Wide hardware and software compatibility</li>
+                        <li>Excellent for gaming and multimedia</li>
+                        <li>Strong customer support and documentation</li>
+                        <li>Regular security updates</li>
+                        <li>Suitable for both personal and professional use</li>
+                    </ul>
+
+                    <h4 style="color: #1e293b; font-size: 1.4rem; font-weight: 600; margin: 1.5rem 0 1rem 0;">Disadvantages of MS Windows:</h4>
+                    <ul>
+                        <li>Requires license purchase (not free)</li>
+                        <li>More vulnerable to viruses and malware compared to other OS</li>
+                        <li>Can be resource-intensive (requires more RAM and storage)</li>
+                        <li>May experience occasional system slowdowns</li>
+                        <li>Forced automatic updates can be disruptive</li>
+                    </ul>
+
+                    <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 2rem; border-radius: 12px; color: white; margin: 2rem 0;">
+                        <h3 style="color: white; margin-top: 0;">💡 Key Takeaways</h3>
+                        <ul style="line-height: 1.8;">
+                            <li>Operating systems manage hardware and software resources of a computer.</li>
+                            <li>Different types of OS serve different purposes: single-user, multi-user, real-time, mobile, and network OS.</li>
+                            <li>CUI uses text commands while GUI uses graphical elements for user interaction.</li>
+                            <li>MS-DOS is a command-line operating system that was popular in the 1980s and 1990s.</li>
+                            <li>DOS commands are categorized into Internal (built-in) and External (separate files) commands.</li>
+                            <li>MS Windows is a graphical operating system that provides a user-friendly interface for all types of users.</li>
+                        </ul>
+                    </div>
+
+                    <h2 style="color: #1e293b; font-size: 1.8rem; font-weight: 600; margin: 2rem 0 1rem 0; padding-bottom: 0.5rem; border-bottom: 3px solid #3b82f6; display: flex; align-items: center; gap: 10px;"><i class="fas fa-question-circle" style="color: #3b82f6;"></i>Questions and Answers</h2>
+                    
+                    <div style="margin: 2rem 0;">
+                        <h3 style="color: #2563eb; font-size: 1.4rem; font-weight: 600; margin: 1.5rem 0 1rem 0;">Q1. What is operating system? Write down the advantage of Windows based OS over DOS based OS.</h3>
+                        <div style="background-color: #f8f9fa; padding: 1.5rem; border-left: 4px solid #3b82f6; border-radius: 4px;">
+                            <p><b>Answer:</b></p>
+                            <p><strong>What is Operating System:</strong></p>
+                            <p>An operating system (OS) is system software that manages computer hardware and software resources and provides common services for computer programs. It acts as an intermediary between users and the computer hardware, making it possible for users to interact with the computer without needing to understand the complex details of hardware operations. The operating system is the first program loaded when a computer starts and continues running until the computer is shut down.</p>
+                            
+                            <p style="margin-top: 1rem;"><strong>Advantages of Windows-Based OS over DOS-Based OS:</strong></p>
+                            
+                            <ul style="line-height: 2; margin: 1.5rem 0; padding-left: 2rem;">
+                                <li><strong>Windows uses GUI (icons & mouse), DOS uses text commands:</strong> Windows provides a graphical user interface with visual elements like icons, windows, and menus that can be operated with a mouse, making it much more intuitive. DOS requires typing specific text commands, which is less user-friendly.</li>
+                                
+                                <li><strong>Easier to learn and use:</strong> Windows has a simple point-and-click interface that anyone can learn quickly without technical knowledge. DOS requires memorizing commands and their syntax, making it difficult for beginners.</li>
+                                
+                                <li><strong>Supports multitasking (run many programs at once):</strong> Windows allows users to run multiple programs simultaneously and switch between them easily. DOS is single-tasking and can only run one program at a time.</li>
+                                
+                                <li><strong>Better graphics and sound support:</strong> Windows has excellent built-in support for multimedia, including high-quality graphics, audio, video playback, and gaming. DOS has very limited or no multimedia capabilities.</li>
+                                
+                                <li><strong>Supports modern hardware and software:</strong> Windows supports the latest hardware devices with Plug and Play functionality and is compatible with millions of modern software applications. DOS has limited hardware support and most modern software does not work on DOS.</li>
+                                
+                                <li><strong>Provides file management tools and networking:</strong> Windows includes File Explorer for easy visual file management with drag-and-drop functionality, and built-in networking features for internet access and file sharing. DOS requires command-line operations for file management and has limited networking capabilities.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <h2 style="color: #1e293b; font-size: 1.8rem; font-weight: 600; margin: 2rem 0 1rem 0; padding-bottom: 0.5rem; border-bottom: 3px solid #3b82f6; display: flex; align-items: center; gap: 10px;"><i class="fas fa-pencil-alt" style="color: #3b82f6;"></i>Practice Questions</h2>
+                    <ol style="line-height: 2; padding-left: 1.5rem;">
+                        <li>What is an operating system? List its main functions.</li>
+                        <li>Explain the different types of operating systems with examples.</li>
+                        <li>What are the differences between CUI and GUI operating systems?</li>
+                        <li>Define MS-DOS. What are its main characteristics?</li>
+                        <li>Differentiate between internal and external commands in MS-DOS.</li>
+                        <li>Write the commands to perform the following operations in MS-DOS:
+                            <ul style="list-style-type: lower-alpha; padding-left: 2rem;">
+                                <li>Display a list of files in the current directory</li>
+                                <li>Create a new folder named "MYDATA"</li>
+                                <li>Copy a file from C: drive to D: drive</li>
+                                <li>Delete a file named "OLD.TXT"</li>
+                                <li>Clear the screen</li>
+                            </ul>
+                        </li>
+                        <li>What is MS Windows? Write its main features.</li>
+                        <li>List the major versions of Windows operating system with their release years.</li>
+                        <li>Describe the components of the Windows desktop.</li>
+                        <li>What are the advantages and disadvantages of MS Windows?</li>
+                        <li>Compare MS-DOS and MS Windows operating systems.</li>
+                        <li>Why is GUI-based operating system more popular than CUI-based operating system?</li>
+                        <li>Explain the terms: Booting, File, Directory, Wildcards, and Command.</li>
+                        <li>What is the difference between cold booting and warm booting?</li>
+                        <li>How are wildcards useful in MS-DOS? Give examples.</li>
+                    </ol>
+                </div>
+                
+                <div style="margin-top: 3rem; text-align: center;">
+                    <a href="../index.html" class="cta-button">← Back to Class 8 Chapters</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 PathSathi. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../../../js/main.js"></script>
+</body>
+</html>
